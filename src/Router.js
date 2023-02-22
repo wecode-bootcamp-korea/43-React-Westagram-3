@@ -8,7 +8,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        
+        ></>
       </Routes>
     </BrowserRouter>
   );
