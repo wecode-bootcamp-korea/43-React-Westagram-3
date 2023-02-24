@@ -39,12 +39,12 @@ function JeounghoLogin() {
       alert('아이디와 비밀번호를 다르게 입력해주세요');
     } else {
       alert('로그인 성공');
-      navigate('/jeoungho-Main');
+      navigate('/jeongin-Main');
     }
   };
 
   return (
-    <main className="login" onKeyUp={onKeyUp}>
+    <main className="jeounghoLogin" onKeyUp={onKeyUp}>
       <form className="loginForm" onSubmit={handleSubmit}>
         <h1>
           <span>W</span>es<span>t</span>agram
