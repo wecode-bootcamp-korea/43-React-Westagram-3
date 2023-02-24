@@ -2,18 +2,26 @@ import React, { useState } from 'react';
 import './SumiLogin.scss';
 
 const SumiLogin = () => {
-  const [input, setInput] = useState('');
+  const [inputEmail, setInputEmail] = useState('');
+  const [inputPw, setInPutPw] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  const saveUserId = e => {
-    setInput(e.target.value);
+  const saveUserEmail = e => {
+    setInputEmail(e.target.value);
   };
 
   const saveUserPw = e => {
-    setInput(e.target.value);
+    setInPutPw(e.target.value);
   };
 
   const onSubmit = e => {
     e.preventDefault();
+  };
+
+  const saveAccount = () => {
+    inputEmail.indexOf('@') > -1 && inputPw.length > 5
+      ? setIsDisabled(false)
+      : setIsDisabled(true);
   };
 
   return (
@@ -26,6 +34,7 @@ const SumiLogin = () => {
           action="#none"
           className="login_form"
           onSubmit={onSubmit}
+          onKeyUp={saveAccount}
         >
           <fieldset>
             <legend className="screen_out">로그인</legend>
@@ -35,7 +44,7 @@ const SumiLogin = () => {
               className="inp_user"
               placeholder="전화번호, 사용자이름 또는 이메일"
               title="전화번호, 사용자이름 또는 이메일"
-              onChange={saveUserId}
+              onChange={saveUserEmail}
             />
             <input
               type="password"
@@ -45,7 +54,14 @@ const SumiLogin = () => {
               title="비밀번호"
               onChange={saveUserPw}
             />
-            <button type="submit" className="btn_login" disabled>
+            {inputEmail.indexOf('@') > -1 && inputPw.length > 5 ? (
+              ''
+            ) : (
+              <p className="desc_error">
+                올바른 이메일 주소와 비밀번호를 입력해주세요.
+              </p>
+            )}
+            <button type="submit" className="btn_login" disabled={isDisabled}>
               로그인
             </button>
           </fieldset>
