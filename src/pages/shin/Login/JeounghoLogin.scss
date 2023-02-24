@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.jeounghoLogin {
+  display: flex;
+  width: 40%;
+  height: 800px;
+  margin: 20px auto;
+  padding: auto;
+  background-color: #fafafa;
+
+  .loginForm {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    border: 3px solid #e6e6e6;
+    background-color: white;
+
+    span {
+      font-size: 90px;
+    }
+
+    h1 {
+      margin: 55px 0;
+      font-family: 'Lobster', sans-serif;
+      font-size: 65px;
+    }
+
+    input {
+      width: 75%;
+      height: 60px;
+      margin-bottom: 10px;
+      border: 1px solid gainsboro;
+      border-radius: 5px;
+      background-color: #fafafa;
+      color: black;
+      font-size: 20px;
+      font-weight: 600;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #999999;
+      }
+    }
+
+    .defaultLogin {
+      width: 75%;
+      height: 50px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #c4e1fb;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .changeLogin {
+      width: 75%;
+      height: 50px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: blue;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    a {
+      position: absolute;
+      bottom: 30px;
+      color: #1f4d7b;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
