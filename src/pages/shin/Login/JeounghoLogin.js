@@ -39,7 +39,7 @@ function JeounghoLogin() {
       alert('아이디와 비밀번호를 다르게 입력해주세요');
     } else {
       alert('로그인 성공');
-      navigate('/jeongin-Main');
+      navigate('/jeoungho-Main');
     }
   };
 
