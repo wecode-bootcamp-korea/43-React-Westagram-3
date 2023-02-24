@@ -1,0 +1,49 @@
+@import '../../../styles/mixin';
+
+.login {
+  @include flexCenter;
+  height: 100vh;
+  background-color: #fafafa;
+
+  .login_box {
+    @include flexCenter;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    h1 {
+      margin-bottom: 20px;
+      color: rgba(0, 0, 0, 0.8);
+      font-family: 'westagram';
+    }
+
+    input {
+      width: 250px;
+      height: 30px;
+      margin-bottom: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background-color: #fafafa;
+    }
+
+    .buttonLoginDisable {
+      @include buttonLogin();
+      background-color: rgb(76, 181, 249);
+    }
+    .buttonLoginAble {
+      @include buttonLogin();
+      background-color: rgb(0, 149, 246);
+      &:hover {
+        background-color: rgb(0, 123, 246);
+        cursor: pointer;
+      }
+    }
+    a {
+      color: rgb(0, 0, 143);
+      font-size: 12px;
+      text-decoration: none;
+    }
+  }
+}
