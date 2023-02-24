@@ -22,7 +22,7 @@ const Router = () => {
         <Route path="/sumi-Login" element={<SumiLogin />} />
         <Route path="/sumi-Main" element={<SumiMain />} />
 
-        <Route path="/jeoungho-Login" element={<JeounghoLogin />} />
+        <Route path="/" element={<JeounghoLogin />} />
         <Route path="/jeoungho-Main" element={<JeounghoMain />} />
 
         <Route path="/jeongin-Login" element={<JeonginLogin />} />
