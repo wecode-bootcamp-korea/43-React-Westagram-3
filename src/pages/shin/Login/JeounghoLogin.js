@@ -6,7 +6,7 @@ function JeounghoLogin() {
   const navigate = useNavigate();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
-  const [validity, setValidity] = useState(false);
+  const [validity, setValidity] = useState(true);
 
   const changeId = e => {
     setId(e.target.value);
@@ -21,9 +21,9 @@ function JeounghoLogin() {
   };
 
   const onKeyUp = validity => {
-    return id.length > 0 && password.length > 0
-      ? setValidity(validity)
-      : setValidity(!validity);
+    return id.includes('@') && password.length >= 5
+      ? setValidity(!validity)
+      : setValidity(validity);
   };
 
   const onClick = () => {
@@ -44,7 +44,7 @@ function JeounghoLogin() {
   };
 
   return (
-    <main className="jeounghoLogin" onKeyUp={onKeyUp}>
+    <main className="login">
       <form className="loginForm" onSubmit={handleSubmit}>
         <h1>
           <span>W</span>es<span>t</span>agram
@@ -55,6 +55,7 @@ function JeounghoLogin() {
           placeholder="이메일"
           value={id}
           onChange={changeId}
+          onKeyUp={onKeyUp}
         />
         <input
           id="pas"
@@ -63,9 +64,11 @@ function JeounghoLogin() {
           autoComplete="off"
           value={password}
           onChange={changePassword}
+          onKeyUp={onKeyUp}
         />
         <button
-          className={validity ? 'changeLogin' : 'defaultLogin'}
+          disabled={validity}
+          className={validity ? 'defaultLogin' : 'changeLogin'}
           onClick={onClick}
         >
           로그인
