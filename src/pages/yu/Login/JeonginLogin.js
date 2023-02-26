@@ -9,7 +9,7 @@ const JeonginLogin = () => {
   const isInputValue = id.includes('@') && pw.length >= 5;
 
   const goToMain = () => {
-    navigate('/main');
+    navigate('/jeongin-Main');
   };
 
   const saveUserId = e => {
@@ -48,15 +48,11 @@ const JeonginLogin = () => {
           className={isInputValue ? 'buttonLoginAble' : 'buttonLoginDisable'}
           disabled={isInputValue ? false : true}
           onClick={goToMain}
+          onKeyUp={goToMain}
         >
           로그인
         </button>
-        <a
-          className="forgot_pw"
-          href="https://www.instagram.com/accounts/password/reset/"
-        >
-          비밀번호를 잊으셨나요?
-        </a>
+        <div className="forgot_pw">비밀번호를 잊으셨나요?</div>
       </div>
     </main>
   );

@@ -12,3 +12,8 @@
   border-radius: 5px;
   color: #fafafa;
 }
+
+@mixin iconSize {
+  width: 30px;
+  height: 30px;
+}
