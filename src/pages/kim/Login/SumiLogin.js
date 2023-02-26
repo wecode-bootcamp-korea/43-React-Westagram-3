@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SumiLogin.scss';
 
 const SumiLogin = () => {
   const [inputEmail, setInputEmail] = useState('');
   const [inputPw, setInPutPw] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate('/sumi-Main');
+  };
 
   const saveUserEmail = e => {
     setInputEmail(e.target.value);
@@ -61,7 +66,12 @@ const SumiLogin = () => {
                 올바른 이메일 주소와 비밀번호를 입력해주세요.
               </p>
             )}
-            <button type="submit" className="btn_login" disabled={isDisabled}>
+            <button
+              type="submit"
+              className="btn_login"
+              disabled={isDisabled}
+              onClick={goToMain}
+            >
               로그인
             </button>
           </fieldset>
