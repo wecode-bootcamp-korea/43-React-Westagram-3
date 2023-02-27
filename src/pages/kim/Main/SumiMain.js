@@ -14,7 +14,7 @@ const SumiMain = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setIsSubmit(true);
-    const newItem = comment;
+    const newItem = { id: Math.random(), comment: comment };
     setText([...text, newItem]);
     e.target.reset();
   };

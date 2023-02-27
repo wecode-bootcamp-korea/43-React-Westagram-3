@@ -3,14 +3,15 @@ import '../CommentList/CommentList.scss';
 
 const CommentList = props => {
   const { text } = props;
-  const commentList = text.map((data, index) => (
-    <li key={index.toString()}>
+
+  const commentList = text.map(data => (
+    <li key={data.id}>
       <span className="screen_out">댓글 작성자: </span>
       <a href="#none" className="link_user">
-        sumi_zz
+        sumi__zz
       </a>
       <span className="screen_out">댓글 내용: </span>
-      {data}
+      {data.comment}
       <button className="btn_like" type="button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
