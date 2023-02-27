@@ -67,8 +67,8 @@ const JeonginMain = () => {
               <div className="user_time">54분전</div>
               <div className="add_user_comment">
                 <ul>
-                  {comment.map((ddd, idx) => {
-                    return <li key={idx}>{ddd.content}</li>;
+                  {comment.map((data, idx) => {
+                    return <li key={idx}>{data.content}</li>;
                   })}
                 </ul>
               </div>
