@@ -21,7 +21,7 @@ const SumiMain = () => {
   };
 
   return (
-    <div className="main">
+    <div className="sumiMain">
       <nav className="navWesta">
         <div className="innerNav">
           <h1 className="titLogo">

@@ -30,7 +30,7 @@ const SumiLogin = () => {
   };
 
   return (
-    <div className="login">
+    <div className="sumiLogin">
       <h2 className="screenOut">인스타그램</h2>
       <div className="boxLogin">
         <strong className="titLogo">Westagram</strong>
