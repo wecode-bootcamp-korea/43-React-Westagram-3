@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './JeounghoLogin.scss';
 
 function JeounghoLogin() {
@@ -26,21 +26,11 @@ function JeounghoLogin() {
       : setValidity(validity);
   };
 
-  const onClick = () => {
-    if (id.length === 0) {
-      alert('아이디를 입력하세요');
-    } else if (id.length > 1 && password.length === 0) {
-      alert('비밀번호를 입력하세요');
-    } else if (id.length > 20 || !id.includes('@')) {
-      alert('아이디 형식이 맞지 않습니다. 다시 입력하세요');
-    } else if (id.length > 1 && password.length < 5) {
-      alert('비밀번호는 5글자 이상입니다.');
-    } else if (id === password) {
-      alert('아이디와 비밀번호를 다르게 입력해주세요');
-    } else {
-      alert('로그인 성공');
-      navigate('/jeoungho-Main');
-    }
+  const handleClick = () => {
+    return (
+      id.includes('@') &&
+      password.length >= 5(alert('로그인 성공'), navigate('/jeoungho-Main'))
+    );
   };
 
   return (
@@ -50,7 +40,7 @@ function JeounghoLogin() {
           <span>W</span>es<span>t</span>agram
         </h1>
         <input
-          id="email"
+          className="inputArea"
           type="text"
           placeholder="이메일"
           value={id}
@@ -58,7 +48,7 @@ function JeounghoLogin() {
           onKeyUp={onKeyUp}
         />
         <input
-          id="pas"
+          className="inputArea"
           type="password"
           placeholder="비밀번호"
           autoComplete="off"
@@ -69,11 +59,13 @@ function JeounghoLogin() {
         <button
           disabled={validity}
           className={validity ? 'defaultLogin' : 'changeLogin'}
-          onClick={onClick}
+          onClick={handleClick}
         >
           로그인
         </button>
-        <a href="#!">비밀번호를 잊으셨나요?</a>
+        <Link className="forgotPassword" to="#">
+          비밀번호를 잊으셨나요?
+        </Link>
       </form>
     </main>
   );

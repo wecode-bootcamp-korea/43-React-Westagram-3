@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 .login {
   display: flex;
   width: 40%;
@@ -30,7 +28,7 @@
       font-size: 65px;
     }
 
-    input {
+    .inputArea {
       width: 75%;
       height: 60px;
       margin-bottom: 10px;
@@ -43,8 +41,6 @@
 
       &:focus {
         outline: none;
-        ::placeholder {
-        }
       }
 
       &::placeholder {
@@ -77,7 +73,7 @@
       font-weight: 600;
     }
 
-    a {
+    .forgotPassword {
       position: absolute;
       bottom: 30px;
       color: #1f4d7b;

@@ -12,6 +12,9 @@ const JeounghoMain = () => {
   const [saveComment, setSaveComment] = useState([]);
   const [numberComments, setNumberComments] = useState(0);
   const [numberlike, setNumberLike] = useState(0);
+  const [idValueFind, setIdValueFind] = useState('');
+  const [foundId, setFoundId] = useState([]);
+  const [isFoundId, setIsFoundId] = useState(true);
 
   if (numberlike < 0) {
     setNumberLike(0);
@@ -29,11 +32,28 @@ const JeounghoMain = () => {
     setComment(e.target.value);
   };
 
+  const changeIdValueFind = e => {
+    setIdValueFind(e.target.value);
+  };
+
+  const changeqwe = () => {
+    idValueFind.length >= 1 ? setIsFoundId(true) : setIsFoundId(false);
+  };
+
+  const idReach = idValueFind => {
+    setFoundId(
+      saveComment
+        .filter(item => item.id.includes(idValueFind))
+        .map(item => item.id)
+    );
+  };
+
   const commitCreate = e => {
     if (e.key === 'Enter') {
       if (comment.length > 0) {
         commentInformation();
         setComment('');
+        idReach(idValueFind);
       }
     }
   };
@@ -64,6 +84,7 @@ const JeounghoMain = () => {
         item.up = !item.up;
         setNumberLike(numberlike - 1);
       }
+      return item;
     });
   };
 
@@ -91,7 +112,23 @@ const JeounghoMain = () => {
             alt="instargram logo"
           />
           <div className="icon">
-            <input className="search" type="text" placeholder="검색" />
+            <input
+              className="search"
+              type="text"
+              placeholder="검색"
+              value={idValueFind}
+              onChange={changeIdValueFind}
+              onKeyUp={changeqwe}
+            />
+            <div style={{ height: '50px', overflow: 'auto' }}>
+              {isFoundId
+                ? foundId.map(item => (
+                    <div className="reachId" key={item}>
+                      {item}
+                    </div>
+                  ))
+                : ''}
+            </div>
             <i className="bi bi-search" />
           </div>
           <div className="imgs">
@@ -152,11 +189,13 @@ const JeounghoMain = () => {
 
             <span className="hearts">좋아요 {numberlike}개</span>
             <div className="commentSection">
+              <img src={profile} alt="profile" />
               <p>
+                <strong>hole546님 외 </strong>
                 <strong>{numberComments}명</strong>이 댓글을 다셨습니다.
               </p>
             </div>
-            <div id="comment_content">
+            <div className="commentContent">
               {saveComment.map(item => (
                 <Comment
                   item={item}
@@ -170,20 +209,20 @@ const JeounghoMain = () => {
             <div className="wrap">
               <input
                 onKeyPress={commitCreate}
-                id="comment"
+                className="comment"
                 type="text"
                 placeholder="댓글 달기"
                 value={comment}
                 onChange={changeComment}
               />
-              <button id="postingBtn" onClick={postButton}>
+              <button className="postingBtn" onClick={postButton}>
                 게시
               </button>
             </div>
           </div>
         </div>
 
-        <div className="main-right">
+        <div className="mainRight">
           <div className="article">
             <div className="information">
               <div className="profile">
@@ -193,14 +232,14 @@ const JeounghoMain = () => {
             </div>
 
             <div className="story">
-              <div className="story_header">
+              <div className="storyHeader">
                 <p>스토리</p>
                 <strong>모두 보기</strong>
               </div>
             </div>
 
             <div className="recommendation">
-              <div className="story_header">
+              <div className="recommendationHeader">
                 <p>회원님을 위한 추천</p>
                 <strong>모두 보기</strong>
               </div>
