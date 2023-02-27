@@ -26,7 +26,6 @@ const JeonginLogin = () => {
         <input
           onChange={saveUserId}
           value={id}
-          id="LoginId"
           className="login_id"
           type="name"
           placeholder=" 전화번호,
@@ -36,7 +35,6 @@ const JeonginLogin = () => {
         <input
           onChange={saveUserPw}
           value={pw}
-          id="LoginPw"
           className="login_pw"
           type="password"
           placeholder="
@@ -46,7 +44,7 @@ const JeonginLogin = () => {
         <button
           id="LoginBtn"
           className={isInputValue ? 'buttonLoginAble' : 'buttonLoginDisable'}
-          disabled={isInputValue ? false : true}
+          disabled={!isInputValue}
           onClick={goToMain}
           onKeyUp={goToMain}
         >
