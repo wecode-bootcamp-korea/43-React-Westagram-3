@@ -11,7 +11,11 @@ const JeonginLogin = () => {
   const goToMain = () => {
     navigate('/jeongin-Main');
   };
-
+  const handleSubmit = e => {
+    if (e.key === 'Enter') {
+      navigate('/jeongin-Main');
+    }
+  };
   const saveUserId = e => {
     setId(e.target.value);
   };
@@ -35,6 +39,7 @@ const JeonginLogin = () => {
         <input
           onChange={saveUserPw}
           value={pw}
+          onKeyDown={e => handleSubmit(e)}
           className="login_pw"
           type="password"
           placeholder="
@@ -46,7 +51,6 @@ const JeonginLogin = () => {
           className={isInputValue ? 'buttonLoginAble' : 'buttonLoginDisable'}
           disabled={!isInputValue}
           onClick={goToMain}
-          onKeyUp={goToMain}
         >
           로그인
         </button>

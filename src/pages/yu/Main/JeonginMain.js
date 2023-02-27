@@ -80,7 +80,6 @@ const JeonginMain = () => {
                 placeholder="댓글 달기..."
                 onChange={handleChange}
                 value={contents}
-                onKeyDown={e => handleSubmit(e)}
               />
               <button onClick={handleClick} className="comment_submit">
                 게시
