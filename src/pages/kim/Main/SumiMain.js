@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import CommentList from '../../../components/CommentList/CommentList';
 import './SumiMain.scss';
 
@@ -24,9 +25,9 @@ const SumiMain = () => {
       <nav className="navWesta">
         <div className="innerNav">
           <h1 className="titLogo">
-            <a href="#none" className="linkLogo">
+            <Link to="#none" className="linkLogo">
               Westagram
-            </a>
+            </Link>
           </h1>
           <div className="wrapSearch">
             <form method="post" action="#none">
@@ -40,31 +41,31 @@ const SumiMain = () => {
             <h2 className="screenOut">위스타그램 메인 메뉴</h2>
             <ul className="listUtil">
               <li>
-                <a href="#none" className="linkUtil">
+                <Link to="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
                     className="imgG"
                     alt="탐색"
                   />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkUtil">
+                <Link to="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
                     className="imgG"
                     alt="알림"
                   />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkUtil">
+                <Link to="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
                     className="imgG"
                     alt="프로필"
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,7 +77,7 @@ const SumiMain = () => {
           <h3 className="screenOut">피드</h3>
           <ul className="listInsta">
             <li>
-              <a href="#none" className="linkProfile">
+              <Link to="#none" className="linkProfile">
                 <span className="wrapThumb">
                   <span
                     className="thumbProfile"
@@ -91,7 +92,7 @@ const SumiMain = () => {
                 <span className="numDate">
                   <span className="screenOut">작성 일 : </span>2일
                 </span>
-              </a>
+              </Link>
               <span className="wrapFeedimg">
                 <span
                   className="thumbFeed"
@@ -131,9 +132,9 @@ const SumiMain = () => {
                 </button>
               </div>
               <div className="feedUser">
-                <a href="#none" className="linkUser">
+                <Link to="#none" className="linkUser">
                   <span className="screenOut">작성자: </span>wecode_bootcamp
-                </a>
+                </Link>
                 <p className="descFeed">
                   <span className="screenOut">작성자 소개 : </span>위워크에서
                   진행한 베이킹 클래스
@@ -143,9 +144,9 @@ const SumiMain = () => {
                 </button>
               </div>
               <div className="groupComment">
-                <a href="#none" className="linkComment">
+                <Link to="#none" className="linkComment">
                   댓글 100개 모두 보기
-                </a>
+                </Link>
                 <div className="areaWritebox">
                   <form
                     action="#none"
@@ -192,7 +193,7 @@ const SumiMain = () => {
           </ul>
         </article>
         <aside className="asideInsta">
-          <a href="#none" className="linkUser">
+          <Link to="#none" className="linkUser">
             <span className="wrapThumb">
               <span
                 className="thumbUser"
@@ -210,12 +211,12 @@ const SumiMain = () => {
                 <span className="screenOut">회원님 소개 : </span>Wecode - 위코드
               </span>
             </span>
-          </a>
+          </Link>
           <div className="boxInfo">
             <strong className="titInfo">스토리</strong>
             <ul className="listInfo">
               <li>
-                <a href="#none" className="linkProfile">
+                <Link to="#none" className="linkProfile">
                   <span
                     className="thumbProfile"
                     style={{
@@ -231,10 +232,10 @@ const SumiMain = () => {
                       <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkProfile">
+                <Link to="#none" className="linkProfile">
                   <span
                     className="thumbProfile"
                     style={{
@@ -250,10 +251,10 @@ const SumiMain = () => {
                       <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkProfile">
+                <Link to="#none" className="linkProfile">
                   <span
                     className="thumbProfile"
                     style={{
@@ -269,18 +270,18 @@ const SumiMain = () => {
                       <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
-            <a href="#none" className="linkMore">
+            <Link to="#none" className="linkMore">
               모두보기
-            </a>
+            </Link>
           </div>
           <div className="boxInfo">
             <strong className="titInfo">회원님을 위한 추천</strong>
             <ul className="listInfo">
               <li>
-                <a href="#none" className="linkProfile">
+                <Link to="#none" className="linkProfile">
                   <span
                     className="thumbProfile"
                     style={{
@@ -297,13 +298,13 @@ const SumiMain = () => {
                       wecode_bootcamp 외 112명이 팔로우 중입니다.
                     </span>
                   </span>
-                </a>
+                </Link>
                 <button className="btnFollow" type="button">
                   팔로우
                 </button>
               </li>
               <li>
-                <a href="#none" className="linkProfile">
+                <Link to="#none" className="linkProfile">
                   <span
                     className="thumbProfile"
                     style={{
@@ -320,58 +321,58 @@ const SumiMain = () => {
                       일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
                     </span>
                   </span>
-                </a>
+                </Link>
                 <button className="btnFollow" type="button">
                   팔로우
                 </button>
               </li>
             </ul>
-            <a href="#none" className="linkMore">
+            <Link to="#none" className="linkMore">
               모두보기
-            </a>
+            </Link>
           </div>
           <footer className="instaFooter">
             <strong className="screenOut">위스타그램 서비스 정보</strong>
             <ul className="listCorp">
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   소개
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   도움말
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   홍보 센터
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   채용 정보
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   개인정보처리방침
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   약관
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   위치
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#none" className="linkCorp">
+                <Link to="#none" className="linkCorp">
                   언어
-                </a>
+                </Link>
               </li>
             </ul>
             <p className="txtCopy">&#169; 2023 INSTAGRAM FROM META</p>

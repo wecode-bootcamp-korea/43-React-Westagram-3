@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './SumiLogin.scss';
 
 const SumiLogin = () => {
@@ -76,9 +76,9 @@ const SumiLogin = () => {
             </button>
           </fieldset>
         </form>
-        <a href="#none" className="linkPsassword">
+        <Link to="#none" className="linkPsassword">
           비밀번호를 잊으셨나요?
-        </a>
+        </Link>
       </div>
     </div>
   );
