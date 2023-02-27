@@ -1,0 +1,44 @@
+.list_comment {
+  padding-top: 15px;
+
+  li {
+    position: relative;
+    padding: 7px 40px 7px 0;
+    color: #555;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+  }
+
+  .link_user {
+    display: inline-block;
+    margin-right: 8px;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    vertical-align: top;
+  }
+
+  .btn_like {
+    position: absolute;
+    top: 50%;
+    right: -9px;
+    box-sizing: content-box;
+    width: 12px;
+    padding: 9px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .img_g {
+    fill: #ccc;
+  }
+
+  .btn_like.on {
+    .img_g {
+      fill: #ff4c82;
+    }
+  }
+}
