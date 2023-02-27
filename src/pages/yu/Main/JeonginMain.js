@@ -1,24 +1,33 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import JeonginComment from './JeonginComment';
 import '../../../pages/yu/Main/JeonginMain.scss';
 
 const JeonginMain = () => {
-  const [contents, setContents] = useState('');
-  const [comment, setComment] = useState([]);
+  const [input, setInput] = useState('');
+  const [comments, setComments] = useState([]);
+  const [nextId, setNextId] = useState(0);
+  const commentInput = useRef('');
 
-  const handleChange = e => {
-    setContents(e.target.value);
+  const onChange = e => {
+    setInput(e.target.value);
   };
-  const handleClick = () => {
-    const commentNew = { content: contents };
-    setComment([...comment, commentNew]);
-    setContents('');
+  const submit = e => {
+    e.preventDefault();
+    const newComments = comments.concat({
+      id: nextId,
+      text: input,
+    });
+    setNextId(nextId + 1);
+    setComments(newComments);
+    setInput('');
   };
-  const handleSubmit = e => {
-    if (e.key === 'Enter') {
-      handleClick();
-    }
-  };
+  const commentList = comments.map(comment => (
+    <li key={comment.id}>
+      <span>wecode_zzang</span>
+      {comment.text}
+    </li>
+  ));
 
   return (
     <div className="main">
@@ -65,26 +74,22 @@ const JeonginMain = () => {
               </span>
               <span className="user_more">...더보기</span>
               <div className="user_time">54분전</div>
-              <div className="add_user_comment">
-                <ul>
-                  {comment.map((data, idx) => {
-                    return <li key={idx}>{data.content}</li>;
-                  })}
-                </ul>
-              </div>
             </div>
-            <div className="comment">
+
+            <div className="add_user_comment">
+              <JeonginComment commentList={commentList} />
+            </div>
+            <form className="comment_submit" onSubmit={submit}>
               <input
                 className="comment_text"
                 type="text"
                 placeholder="댓글 달기..."
-                onChange={handleChange}
-                value={contents}
+                onChange={onChange}
+                ref={commentInput}
+                value={input}
               />
-              <button onClick={handleClick} className="comment_submit">
-                게시
-              </button>
-            </div>
+              <button className="comment_submit">게시</button>
+            </form>
           </article>
         </div>
 
