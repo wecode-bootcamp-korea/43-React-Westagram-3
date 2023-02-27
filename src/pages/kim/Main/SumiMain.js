@@ -21,47 +21,47 @@ const SumiMain = () => {
 
   return (
     <div className="main">
-      <nav className="nav_westa">
-        <div className="inner_nav">
-          <h1 className="tit_logo">
-            <a href="#none" className="link_logo">
+      <nav className="navWesta">
+        <div className="innerNav">
+          <h1 className="titLogo">
+            <a href="#none" className="linkLogo">
               Westagram
             </a>
           </h1>
-          <div className="wrap_search">
+          <div className="wrapSearch">
             <form method="post" action="#none">
               <fieldset>
-                <legend className="screen_out">검색</legend>
-                <input type="text" className="inp_search" title="검색어 입력" />
+                <legend className="screenOut">검색</legend>
+                <input type="text" className="inpSearch" title="검색어 입력" />
               </fieldset>
             </form>
           </div>
-          <div className="gnb_menu">
-            <h2 className="screen_out">위스타그램 메인 메뉴</h2>
-            <ul className="list_util">
+          <div className="gnbMenu">
+            <h2 className="screenOut">위스타그램 메인 메뉴</h2>
+            <ul className="listUtil">
               <li>
-                <a href="#none" className="link_util">
+                <a href="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-                    className="img_g"
+                    className="imgG"
                     alt="탐색"
                   />
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_util">
+                <a href="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-                    className="img_g"
+                    className="imgG"
                     alt="알림"
                   />
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_util">
+                <a href="#none" className="linkUtil">
                   <img
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-                    className="img_g"
+                    className="imgG"
                     alt="프로필"
                   />
                 </a>
@@ -70,117 +70,109 @@ const SumiMain = () => {
           </div>
         </div>
       </nav>
-      <main className="content_westa">
-        <h2 className="screen_out">위스타그램 홈</h2>
-        <article className="insta_feed">
-          <h3 className="screen_out">피드</h3>
-          <ul className="list_insta">
+      <main className="contentWesta">
+        <h2 className="screenOut">위스타그램 홈</h2>
+        <article className="instaFeed">
+          <h3 className="screenOut">피드</h3>
+          <ul className="listInsta">
             <li>
-              <a href="#none" className="link_profile">
-                <span className="wrap_thumb">
+              <a href="#none" className="linkProfile">
+                <span className="wrapThumb">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
+                  />
                 </span>
-                <strong className="tit_user">
-                  <span className="screen_out">작성자 : </span>wecode_bootcamp
+                <strong className="titUser">
+                  <span className="screenOut">작성자 : </span>wecode_bootcamp
                 </strong>
-                <span className="num_date">
-                  <span className="screen_out">작성 일 : </span>2일
+                <span className="numDate">
+                  <span className="screenOut">작성 일 : </span>2일
                 </span>
               </a>
-              <span className="wrap_feedimg">
+              <span className="wrapFeedimg">
                 <span
-                  className="thumb_feed"
+                  className="thumbFeed"
                   style={{
                     backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                   }}
-                >
-                  {/* 피드 이미지를 클래스 thumb_feed의 background-image 인라인 스타일에 넣어주세요. */}
-                </span>
+                />
               </span>
-              <div className="util_feed">
-                <button className="btn_like" type="button">
-                  {/* 좋아요가 활성 상태일때 btn_like에 클래스 on 제거 */}
+              <div className="utilFeed">
+                <button className="btnLike" type="button">
                   <img
                     src="images/kim/ico_like.svg"
-                    className="img_g"
+                    className="imgG"
                     alt="좋아요"
                   />
                 </button>
-                <button className="btn_comment" type="button">
+                <button className="btnComment" type="button">
                   <img
                     src="images/kim/ico_comment.svg"
-                    className="img_g"
+                    className="imgG"
                     alt="댓글"
                   />
                 </button>
-                <button className="btn_share" type="button">
+                <button className="btnShare" type="button">
                   <img
                     src="images/kim/ico_share.svg"
-                    className="img_g"
+                    className="imgG"
                     alt="공유하기"
                   />
                 </button>
-                <button className="btn_bookmark" type="button">
+                <button className="btnBookmark" type="button">
                   <img
                     src="images/kim/ico_bookmark.svg"
-                    className="img_g"
+                    className="imgG"
                     alt="즐겨찾기"
                   />
                 </button>
               </div>
-              <div className="feed_user">
-                <a href="#none" className="link_user">
-                  <span className="screen_out">작성자: </span>wecode_bootcamp
+              <div className="feedUser">
+                <a href="#none" className="linkUser">
+                  <span className="screenOut">작성자: </span>wecode_bootcamp
                 </a>
-                <p className="desc_feed">
-                  <span className="screen_out">작성자 소개 : </span>위워크에서
+                <p className="descFeed">
+                  <span className="screenOut">작성자 소개 : </span>위워크에서
                   진행한 베이킹 클래스
                 </p>
-                <button type="button" className="btn_more">
-                  {/* 내용이 길어질때 클래스 btn_more 추가 */}
-                  <span className="screen_out">내용</span>더보기
+                <button type="button" className="btnMore">
+                  <span className="screenOut">내용</span>더보기
                 </button>
               </div>
-              <div className="group_comment">
-                <a href="#none" className="link_comment">
+              <div className="groupComment">
+                <a href="#none" className="linkComment">
                   댓글 100개 모두 보기
                 </a>
-                <div className="area_writebox">
+                <div className="areaWritebox">
                   <form
                     action="#none"
                     method="post"
                     name="formComment"
-                    className="form_comment"
+                    className="formComment"
                     onSubmit={handleSubmit}
                   >
                     <input
                       aria-label="댓글 달기..."
-                      className="inp_comment"
+                      className="inpComment"
                       placeholder="댓글 달기..."
                       onChange={handleOnChange}
                     />
-                    <button type="submit" className="btn_submit">
+                    <button type="submit" className="btnSubmit">
                       게시
                     </button>
                   </form>
                 </div>
+                {isSubmit && <strong className="screenOut">댓글 리스트</strong>}
                 {isSubmit && (
-                  <strong className="screen_out">댓글 리스트</strong>
-                )}
-                {isSubmit && (
-                  <ul className="list_comment">
+                  <ul className="listComment">
                     <CommentList text={text} />
                   </ul>
                 )}
               </div>
-              <button type="button" className="btn_option">
+              <button type="button" className="btnOption">
                 <svg
                   aria-label="옵션 더 보기"
                   className="_ab6-"
@@ -199,203 +191,190 @@ const SumiMain = () => {
             </li>
           </ul>
         </article>
-        <aside className="aside_insta">
-          <a href="#none" className="link_user">
-            <span className="wrap_thumb">
+        <aside className="asideInsta">
+          <a href="#none" className="linkUser">
+            <span className="wrapThumb">
               <span
-                className="thumb_user"
+                className="thumbUser"
                 style={{
                   backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                 }}
-              >
-                {/* 프로필 사진을 클래스 thumb_user의 background-image 인라인 스타일에 넣어주세요. */}
-              </span>
+              />
             </span>
-            <span className="info_user">
-              <strong className="tit_user">
-                <span className="screen_out">회원님 아이디 : </span>
+            <span className="infoUser">
+              <strong className="titUser">
+                <span className="screenOut">회원님 아이디 : </span>
                 wecode_bootcamp
               </strong>
-              <span className="txt_info">
-                <span className="screen_out">회원님 소개 : </span>Wecode -
-                위코드
+              <span className="txtInfo">
+                <span className="screenOut">회원님 소개 : </span>Wecode - 위코드
               </span>
             </span>
           </a>
-          <div className="box_info">
-            <strong className="tit_info">스토리</strong>
-            <ul className="list_info">
+          <div className="boxInfo">
+            <strong className="titInfo">스토리</strong>
+            <ul className="listInfo">
               <li>
-                <a href="#none" className="link_profile">
+                <a href="#none" className="linkProfile">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
-                  <span className="info_user">
-                    <strong className="tit_user">
-                      <span className="screen_out">작성자 : </span>
+                  />
+                  <span className="infoUser">
+                    <strong className="titUser">
+                      <span className="screenOut">작성자 : </span>
                       wecode_bootcamp
                     </strong>
-                    <span className="num_date">
-                      <span className="screen_out">작성 시간 : </span>16분 전
+                    <span className="numDate">
+                      <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_profile">
+                <a href="#none" className="linkProfile">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
-                  <span className="info_user">
-                    <strong className="tit_user">
-                      <span className="screen_out">작성자 : </span>
+                  />
+                  <span className="infoUser">
+                    <strong className="titUser">
+                      <span className="screenOut">작성자 : </span>
                       wecode_bootcamp
                     </strong>
-                    <span className="num_date">
-                      <span className="screen_out">작성 시간 : </span>16분 전
+                    <span className="numDate">
+                      <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_profile">
+                <a href="#none" className="linkProfile">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
-                  <span className="info_user">
-                    <strong className="tit_user">
-                      <span className="screen_out">작성자 : </span>
+                  />
+                  <span className="infoUser">
+                    <strong className="titUser">
+                      <span className="screenOut">작성자 : </span>
                       wecode_bootcamp
                     </strong>
-                    <span className="num_date">
-                      <span className="screen_out">작성 시간 : </span>16분 전
+                    <span className="numDate">
+                      <span className="screenOut">작성 시간 : </span>16분 전
                     </span>
                   </span>
                 </a>
               </li>
             </ul>
-            <a href="#none" className="link_more">
+            <a href="#none" className="linkMore">
               모두보기
             </a>
           </div>
-          <div className="box_info">
-            <strong className="tit_info">회원님을 위한 추천</strong>
-            <ul className="list_info">
+          <div className="boxInfo">
+            <strong className="titInfo">회원님을 위한 추천</strong>
+            <ul className="listInfo">
               <li>
-                <a href="#none" className="link_profile">
+                <a href="#none" className="linkProfile">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
-                  <span className="info_user">
-                    <strong className="tit_user">
-                      <span className="screen_out">추천친구 : </span>
+                  />
+                  <span className="infoUser">
+                    <strong className="titUser">
+                      <span className="screenOut">추천친구 : </span>
                       wecode_bootcamp
                     </strong>
-                    <span className="txt_info">
-                      <span className="screen_out">팔로우 상태 : </span>
+                    <span className="txtInfo">
+                      <span className="screenOut">팔로우 상태 : </span>
                       wecode_bootcamp 외 112명이 팔로우 중입니다.
                     </span>
                   </span>
                 </a>
-                <button className="btn_follow" type="button">
+                <button className="btnFollow" type="button">
                   팔로우
                 </button>
               </li>
               <li>
-                <a href="#none" className="link_profile">
+                <a href="#none" className="linkProfile">
                   <span
-                    className="thumb_profile"
+                    className="thumbProfile"
                     style={{
                       backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
                     }}
-                  >
-                    {/* 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. */}
-                  </span>
-                  <span className="info_user">
-                    <strong className="tit_user">
-                      <span className="screen_out">추천친구 : </span>
+                  />
+                  <span className="infoUser">
+                    <strong className="titUser">
+                      <span className="screenOut">추천친구 : </span>
                       wecode_bootcamp
                     </strong>
-                    <span className="txt_info">
-                      <span className="screen_out">팔로우 상태 : </span>
+                    <span className="txtInfo">
+                      <span className="screenOut">팔로우 상태 : </span>
                       일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십
                     </span>
                   </span>
                 </a>
-                <button className="btn_follow" type="button">
+                <button className="btnFollow" type="button">
                   팔로우
                 </button>
               </li>
             </ul>
-            <a href="#none" className="link_more">
+            <a href="#none" className="linkMore">
               모두보기
             </a>
           </div>
           <footer className="instaFooter">
-            <strong className="screen_out">위스타그램 서비스 정보</strong>
-            <ul className="list_corp">
+            <strong className="screenOut">위스타그램 서비스 정보</strong>
+            <ul className="listCorp">
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   소개
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   도움말
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   홍보 센터
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   채용 정보
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   개인정보처리방침
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   약관
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   위치
                 </a>
               </li>
               <li>
-                <a href="#none" className="link_corp">
+                <a href="#none" className="linkCorp">
                   언어
                 </a>
               </li>
             </ul>
-            <p className="txt_copy">&#169; 2023 INSTAGRAM FROM META</p>
+            <p className="txtCopy">&#169; 2023 INSTAGRAM FROM META</p>
           </footer>
         </aside>
       </main>

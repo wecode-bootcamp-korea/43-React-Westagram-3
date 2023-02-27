@@ -1,10 +1,10 @@
 /* header */
-.nav_westa {
+.navWesta {
   border-bottom: 1px solid #dedede;
   background-color: #fff;
 }
 
-.inner_nav {
+.innerNav {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -15,12 +15,12 @@
   height: 60px;
   margin: 0 auto;
 
-  .tit_logo {
+  .titLogo {
     font-family: 'Lobster', cursive;
     font-size: 30px;
   }
 
-  .link_logo {
+  .linkLogo {
     display: block;
 
     &:hover {
@@ -28,7 +28,7 @@
     }
   }
 
-  .inp_search {
+  .inpSearch {
     box-sizing: border-box;
     width: 268px;
     height: 30px;
@@ -37,18 +37,18 @@
     border-radius: 30px;
   }
 
-  .wrap_search {
+  .wrapSearch {
     position: relative;
   }
 
-  .list_util {
+  .listUtil {
     font-size: 0;
 
     li {
       display: inline-block;
       vertical-align: top;
 
-      .link_util {
+      .linkUtil {
         display: block;
         width: 23px;
         margin: 0 10px;
@@ -56,7 +56,7 @@
     }
   }
 
-  .list_user {
+  .listUser {
     position: absolute;
     z-index: 10;
     top: 45px;
@@ -67,7 +67,7 @@
     border-radius: 10px;
     background-color: #fff;
 
-    .link_user {
+    .linkUser {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
@@ -76,24 +76,24 @@
       padding: 7px 15px;
     }
 
-    .area_thumb {
+    .areaThumb {
       width: 40px;
       overflow: hidden;
       border-radius: 100%;
     }
 
-    .thumb_user {
+    .thumbUser {
       display: block;
       padding-top: 100%;
       background-size: cover;
     }
 
-    .group_info {
+    .groupInfo {
       width: 230px;
       padding-left: 15px;
     }
 
-    .tit_user {
+    .titUser {
       display: block;
       overflow: hidden;
       color: #222;
@@ -104,7 +104,7 @@
       white-space: nowrap;
     }
 
-    .txt_info {
+    .txtInfo {
       display: block;
       overflow: hidden;
       color: #888;
@@ -117,7 +117,7 @@
 }
 
 /* 메인 */
-.content_westa {
+.contentWesta {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -126,10 +126,10 @@
   margin: 50px auto;
 }
 
-.insta_feed {
+.instaFeed {
   width: 470px;
 
-  .list_insta {
+  .listInsta {
     background-color: #fff;
 
     > li {
@@ -141,26 +141,26 @@
       border-top: 1px solid #dedede;
     }
 
-    .wrap_feedimg {
+    .wrapFeedimg {
       display: block;
       position: relative;
       overflow: hidden;
       border-radius: 5px;
     }
 
-    .thumb_feed {
+    .thumbFeed {
       display: block;
       padding-top: 100%;
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    .util_feed {
+    .utilFeed {
       position: relative;
       padding-top: 13px;
       font-size: 0;
 
-      [class*='btn_'] {
+      [class*='btn'] {
         width: 24px;
         margin: 0 7px;
 
@@ -169,14 +169,14 @@
         }
       }
 
-      .btn_bookmark {
+      .btnBookmark {
         position: absolute;
         top: 11px;
         right: -2px;
       }
     }
 
-    .link_profile {
+    .linkProfile {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
@@ -187,7 +187,7 @@
       margin-bottom: 10px;
       overflow: hidden;
 
-      .tit_user {
+      .titUser {
         display: block;
         padding-left: 10px;
         color: #000;
@@ -196,7 +196,7 @@
         line-height: 18px;
       }
 
-      .txt_info {
+      .txtInfo {
         display: block;
         padding-top: 3px;
         color: #888;
@@ -204,7 +204,7 @@
         line-height: 18px;
       }
 
-      .num_date {
+      .numDate {
         display: block;
         position: relative;
         padding-left: 20px;
@@ -228,12 +228,12 @@
       }
     }
 
-    .wrap_thumb {
+    .wrapThumb {
       position: relative;
       width: 32px;
     }
 
-    .thumb_profile {
+    .thumbProfile {
       display: block;
       padding-top: 100%;
       overflow: hidden;
@@ -256,18 +256,18 @@
       }
     }
 
-    .btn_option {
+    .btnOption {
       position: absolute;
       top: 22px;
       right: -10px;
       padding: 10px;
     }
 
-    .feed_user {
+    .feedUser {
       padding: 9px 0 2px;
       font-size: 0;
 
-      .link_user {
+      .linkUser {
         display: inline-block;
         color: #000;
         font-size: 14px;
@@ -276,7 +276,7 @@
         vertical-align: top;
       }
 
-      .desc_feed {
+      .descFeed {
         display: inline-block;
         width: 150px;
         padding-left: 5px;
@@ -290,14 +290,14 @@
         white-space: nowrap;
       }
 
-      .btn_more {
+      .btnMore {
         color: #888;
         font-size: 14px;
         line-height: 18px;
         vertical-align: top;
       }
 
-      .btn_option {
+      .btnOption {
         position: absolute;
         top: 22px;
         right: -10px;
@@ -305,8 +305,8 @@
       }
     }
 
-    .group_comment {
-      .link_comment {
+    .groupComment {
+      .linkComment {
         display: inline-block;
         padding: 5px 0;
         color: #888;
@@ -315,7 +315,7 @@
         vertical-align: top;
       }
 
-      .inp_comment {
+      .inpComment {
         box-sizing: border-box;
         width: 100%;
         height: 18px;
@@ -330,11 +330,11 @@
           line-height: 18px;
         }
 
-        .area_writebox {
+        .areaWritebox {
           position: relative;
         }
 
-        .btn_submit {
+        .btnSubmit {
           position: absolute;
           top: 50%;
           right: -5px;
@@ -348,11 +348,11 @@
         }
       }
 
-      .area_writebox {
+      .areaWritebox {
         position: relative;
       }
 
-      .btn_submit {
+      .btnSubmit {
         position: absolute;
         top: 50%;
         right: -5px;
@@ -368,24 +368,24 @@
   }
 }
 
-.aside_insta {
+.asideInsta {
   width: 319px;
   padding-top: 15px;
 
-  .link_user {
+  .linkUser {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     align-items: center;
 
-    .wrap_thumb {
+    .wrapThumb {
       position: relative;
       width: 56px;
       overflow: hidden;
       border-radius: 100%;
     }
 
-    .thumb_user {
+    .thumbUser {
       display: block;
       padding-top: 100%;
       background-repeat: no-repeat;
@@ -403,19 +403,19 @@
       }
     }
 
-    .info_user {
+    .infoUser {
       display: block;
       padding-left: 15px;
     }
 
-    .tit_user {
+    .titUser {
       display: block;
       color: #222;
       font-size: 14px;
       line-height: 18px;
     }
 
-    .txt_info {
+    .txtInfo {
       display: block;
       padding-top: 3px;
       color: #888;
@@ -424,12 +424,12 @@
     }
   }
 
-  .box_info {
+  .boxInfo {
     position: relative;
     margin-top: 15px;
     overflow: hidden;
 
-    .list_info {
+    .listInfo {
       margin-left: 3px;
 
       li {
@@ -438,7 +438,7 @@
       }
     }
 
-    .tit_info {
+    .titInfo {
       display: block;
       padding-bottom: 15px;
       color: #222;
@@ -447,20 +447,20 @@
       line-height: 20px;
     }
 
-    .link_more {
+    .linkMore {
       position: absolute;
       color: #888;
       font-size: 12px;
       line-height: 18px;
     }
 
-    .link_profile {
+    .linkProfile {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
     }
 
-    .thumb_profile {
+    .thumbProfile {
       position: relative;
       width: 32px;
       overflow: hidden;
@@ -482,19 +482,19 @@
       }
     }
 
-    .info_user {
+    .infoUser {
       padding-left: 12px;
     }
 
-    .tit_user {
+    .titUser {
       display: block;
       color: #222;
       font-size: 14px;
       line-height: 16px;
     }
 
-    .num_date,
-    .txt_info {
+    .numDate,
+    .txtInfo {
       display: block;
       width: 150px;
       overflow: hidden;
@@ -506,7 +506,7 @@
       white-space: nowrap;
     }
 
-    .btn_follow {
+    .btnFollow {
       position: absolute;
       top: 8px;
       right: 0;
@@ -521,7 +521,7 @@
 .instaFooter {
   padding-top: 20px;
 
-  .list_corp {
+  .listCorp {
     font-size: 0;
 
     li {
@@ -542,7 +542,7 @@
     }
   }
 
-  .txt_copy {
+  .txtCopy {
     padding-top: 10px;
     color: #888;
     font-size: 12px;

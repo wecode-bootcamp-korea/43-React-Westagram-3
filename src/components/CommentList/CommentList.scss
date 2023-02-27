@@ -1,4 +1,4 @@
-.list_comment {
+.listComment {
   padding-top: 15px;
 
   li {
@@ -10,7 +10,7 @@
     word-break: break-all;
   }
 
-  .link_user {
+  .linkUser {
     display: inline-block;
     margin-right: 8px;
     color: #333;
@@ -20,7 +20,7 @@
     vertical-align: top;
   }
 
-  .btn_like {
+  .btnLike {
     position: absolute;
     top: 50%;
     right: -9px;
@@ -32,12 +32,12 @@
     transform: translateY(-50%);
   }
 
-  .img_g {
+  .imgG {
     fill: #ccc;
   }
 
-  .btn_like.on {
-    .img_g {
+  .btnLike.on {
+    .imgG {
       fill: #ff4c82;
     }
   }
