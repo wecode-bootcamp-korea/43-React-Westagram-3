@@ -4,12 +4,16 @@ import { useNavigate } from 'react-router-dom';
 
 const JisuLogin = () => {
   const [id, setId] = useState('');
+  const [pw, setPw] = useState('');
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/jisu-Main');
   };
-  const saveUseId = event => {
-    setId(event.target.value);
+  const saveUserId = e => {
+    setId(e.target.value);
+  };
+  const saveUserPw = e => {
+    setPw(e.target.value);
   };
   return (
     <div className="login">
@@ -24,12 +28,13 @@ const JisuLogin = () => {
               className="center_id"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={saveUseId}
+              onChange={saveUserId}
             />
             <input
               className="center_pw"
               type="password"
               placeholder="비밀번호"
+              onChange={saveUserPw}
             />
           </div>
           <button className="center_login" onClick={goToMain}>
