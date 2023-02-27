@@ -19,11 +19,10 @@
         &:focus::placeholder {
           color: transparent;
         }
-        .reachId {
-          border: 1px solid black;
-        }
       }
-
+      .reachId {
+        border: 1px solid black;
+      }
       .bi-search {
         position: absolute;
         top: 9.5%;
