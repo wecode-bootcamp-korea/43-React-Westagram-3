@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CommentList from '../../../components/CommentList/CommentList';
 import './SumiMain.scss';
@@ -9,14 +9,9 @@ const SumiMain = () => {
   const [text, setText] = useState([]);
   const [active, setActive] = useState(false);
 
-  const changeClass = () => {
-    setActive(!active);
-  };
-
   const handleOnChange = e => {
     setComment(e.target.value);
   };
-
   const handleSubmit = e => {
     e.preventDefault();
     setIsSubmit(true);
@@ -24,6 +19,16 @@ const SumiMain = () => {
     setText([...text, newItem]);
     e.target.reset();
   };
+  const changeClass = () => {
+    setActive(!active);
+  };
+
+  useEffect(() => {
+    if (isSubmit) {
+      let userArr = text.map(item => item.id);
+      console.log(userArr);
+    }
+  }, [isSubmit, text]);
 
   return (
     <div className="sumiMain">

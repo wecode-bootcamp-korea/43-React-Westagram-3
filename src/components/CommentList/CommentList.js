@@ -3,9 +3,8 @@ import '../CommentList/CommentList.scss';
 
 const CommentList = props => {
   const { text, active, changeClass } = props;
-
   const commentList = text.map(data => (
-    <li key={data.id}>
+    <li key={data.id} value={data.id}>
       <span className="screenOut">댓글 작성자: </span>
       <a href="#none" className="linkUser">
         sumi__zz
