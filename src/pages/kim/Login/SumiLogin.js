@@ -76,7 +76,7 @@ const SumiLogin = () => {
             </button>
           </fieldset>
         </form>
-        <Link to="#none" className="linkPsassword">
+        <Link to="#none" className="linkPassword">
           비밀번호를 잊으셨나요?
         </Link>
       </div>
