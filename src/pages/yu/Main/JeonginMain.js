@@ -139,13 +139,14 @@ const JeonginMain = () => {
             </div>
           </div>
 
-          <div className="company">
-            <h6>
-              Westagram정보 지원 홍보센터 API 채용정보 개인정보처리방침 약관
-              디렉터리 프로필 해시태그 언어
-            </h6>
-            <h6>2019 WESTAGRAM</h6>
-          </div>
+          <ul className="infoPolicy">
+            {INFO_POLICY.map(info => (
+              <span key={info.id} className="infoPolicyList">
+                {info.text}
+              </span>
+            ))}
+            <div className="coperation">2019 WESTAGRAM</div>
+          </ul>
         </div>
       </div>
     </div>
@@ -153,3 +154,17 @@ const JeonginMain = () => {
 };
 
 export default JeonginMain;
+
+const INFO_POLICY = [
+  { id: 1, text: '소개' },
+  { id: 2, text: '도움말' },
+  { id: 3, text: '홍보 센터' },
+  { id: 4, text: 'API' },
+  { id: 5, text: '채용 정보' },
+  { id: 6, text: '개인정보처리방침' },
+  { id: 7, text: '약관' },
+  { id: 8, text: '위치' },
+  { id: 9, text: '인기 계정' },
+  { id: 10, text: '해시태그' },
+  { id: 11, text: '언어' },
+];
