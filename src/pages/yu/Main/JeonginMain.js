@@ -24,7 +24,7 @@ const JeonginMain = () => {
   };
   const commentList = comments.map(comment => (
     <li key={comment.id}>
-      <span>wecode_zzang</span>
+      <span className="comment_user_id">wecode_zzang</span>
       {comment.text}
     </li>
   ));

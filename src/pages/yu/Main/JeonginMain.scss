@@ -102,49 +102,54 @@
             font-size: 16px;
           }
         }
-      }
 
-      .aricle_image {
-        width: 500px;
-        height: 400px;
-      }
-
-      .article_bottom {
-        margin-left: 10px;
-
-        .button_bar {
-          display: flex;
-          justify-content: space-between;
-          margin: 10px 0px 10px 0px;
-          margin-left: 5px;
+        .aricle_image {
+          width: 500px;
+          height: 400px;
         }
-        .contents_great {
-          display: flex;
-          align-items: center;
 
-          .contents_avatar {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            border-radius: 100%;
+        .article_bottom {
+          margin-left: 10px;
+
+          .button_bar {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0px 10px 0px;
+            margin-left: 5px;
+          }
+          .contents_great {
+            display: flex;
+            align-items: center;
+
+            .contents_avatar {
+              width: 30px;
+              height: 30px;
+              margin-right: 10px;
+              border-radius: 100%;
+            }
+          }
+          .user_name {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          .user_comment {
+            margin-left: 10px;
+            font-size: 15px;
+          }
+          .user_more {
+            opacity: 0.5;
+            font-size: 14px;
+          }
+          .user_time {
+            margin: 5px 0px 15px 0px;
+            font-size: 12px;
+            font-weight: 700;
           }
         }
-        .user_name {
-          font-size: 16px;
-          font-weight: 600;
-        }
-        .user_comment {
-          margin-left: 10px;
+        .comment_user_id {
+          margin: 0px 10px;
           font-size: 15px;
-        }
-        .user_more {
-          opacity: 0.5;
-          font-size: 14px;
-        }
-        .user_time {
-          margin: 5px 0px 15px 0px;
-          font-size: 12px;
-          font-weight: 700;
+          font-weight: 600;
         }
       }
 
@@ -163,6 +168,7 @@
           border: none;
         }
         .comment_submit {
+          justify-content: center;
           width: 40px;
           height: 22px;
           margin-right: 5px;
@@ -170,6 +176,9 @@
           border-radius: 5px;
           background-color: rgb(222, 237, 246);
           color: rgb(76, 181, 249);
+          &:hover {
+            background-color: rgb(188, 228, 254);
+          }
         }
       }
     }
