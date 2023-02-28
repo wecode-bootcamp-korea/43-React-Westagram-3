@@ -21,14 +21,20 @@ const JeonginMain = () => {
     setNextId(nextId + 1);
     setComments(newComments);
     setInput('');
+    console.log(comments);
   };
+
   const commentList = comments.map(comment => (
-    <li key={comment.id}>
-      <span className="comment_user_id">wecode_zzang</span>
-      {comment.text}
+    <li className="commentUserBox" key={comment.id}>
+      <div>
+        <span className="commentUserId">wecode_zzang</span>
+        {comment.text}
+      </div>
+      <button className="commentUserHeartButton">
+        <img className="commentUserHeart" src="/images/yu/heart.png" />
+      </button>
     </li>
   ));
-  console.log(commentList);
 
   return (
     <div className="main">

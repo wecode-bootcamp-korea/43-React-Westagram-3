@@ -146,10 +146,21 @@
             font-weight: 700;
           }
         }
-        .commentUserId {
+
+        .commentUserBox {
+          display: flex;
+          justify-content: space-between;
           margin: 0px 10px;
-          font-size: 15px;
-          font-weight: 600;
+
+          .commentUserId {
+            margin-right: 10px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .commentUserHeart {
+            width: 12px;
+            height: 12px;
+          }
         }
       }
 
@@ -228,27 +239,21 @@
       background-color: #fff;
 
       .storyTop {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px 10px 0px 10px;
+        @include sideBoxTop;
       }
 
-      .storyList {
+      .storyPerson {
         display: flex;
+        align-items: center;
 
-        .storyPerson {
-          display: flex;
-          align-items: center;
-
-          .avatar {
-            @include iconSize;
-            margin: 0px 10px 0px 10px;
-            border-radius: 100%;
-          }
-          .avatarTime {
-            opacity: 0.6;
-            font-size: 12px;
-          }
+        .avatar {
+          @include iconSize;
+          margin: 0px 10px 0px 10px;
+          border-radius: 100%;
+        }
+        .avatarTime {
+          opacity: 0.6;
+          font-size: 12px;
         }
       }
     }
@@ -260,9 +265,7 @@
       background-color: #fff;
 
       .recommendTop {
-        display: flex;
-        justify-content: space-between;
-        margin: 0px 10px 0px 10px;
+        @include sideBoxTop;
       }
 
       .recommendPerson {
