@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Comment from '../../../components/Comment/Comment';
-import './JeounghoMain.scss';
 import profile from '../../../assets/shin/KakaoTalk_20230213_204309040.jpg';
 import posted from '../../../assets/shin/KakaoTalk_20230214_161243133.jpg';
 import building from '../../../assets/shin/KakaoTalk_20230216_100337086.jpg';
+import './JeounghoMain.scss';
 
 const JeounghoMain = () => {
   const [show, setShow] = useState(false);
@@ -14,7 +14,7 @@ const JeounghoMain = () => {
   const [numberlike, setNumberLike] = useState(0);
   const [idValueFind, setIdValueFind] = useState('');
   const [foundId, setFoundId] = useState([]);
-  const [isFoundId, setIsFoundId] = useState(true);
+  const [isIdArea, setIsIdArea] = useState('hidden');
 
   if (numberlike < 0) {
     setNumberLike(0);
@@ -36,16 +36,18 @@ const JeounghoMain = () => {
     setIdValueFind(e.target.value);
   };
 
-  const changeqwe = () => {
-    idValueFind.length >= 1 ? setIsFoundId(true) : setIsFoundId(false);
-  };
-
   const idReach = idValueFind => {
-    setFoundId(
-      saveComment
-        .filter(item => item.id.includes(idValueFind))
-        .map(item => item.id)
-    );
+    if (idValueFind) {
+      setFoundId(
+        saveComment
+          .filter(item => item.id.includes(idValueFind))
+          .map(item => item.id)
+      );
+      setIsIdArea('');
+    } else {
+      setFoundId([]);
+      setIsIdArea('hidden');
+    }
   };
 
   const commitCreate = e => {
@@ -53,7 +55,6 @@ const JeounghoMain = () => {
       if (comment.length > 0) {
         commentInformation();
         setComment('');
-        idReach(idValueFind);
       }
     }
   };
@@ -118,17 +119,16 @@ const JeounghoMain = () => {
               placeholder="검색"
               value={idValueFind}
               onChange={changeIdValueFind}
-              onKeyUp={changeqwe}
+              onKeyUp={() => idReach(idValueFind)}
             />
-            <div style={{ height: '50px', overflow: 'auto' }}>
-              {isFoundId
-                ? foundId.map(item => (
-                    <div className="reachId" key={item}>
-                      {item}
-                    </div>
-                  ))
-                : ''}
-            </div>
+            <ul className={`searchIdArea${isIdArea}`}>
+              {foundId.map(item => (
+                <li key={item}>
+                  <img src="./images/shin/default profile.png" alt="default" />
+                  {item}
+                </li>
+              ))}
+            </ul>
             <i className="bi bi-search" />
           </div>
           <div className="imgs">
@@ -236,6 +236,12 @@ const JeounghoMain = () => {
                 <p>스토리</p>
                 <strong>모두 보기</strong>
               </div>
+              {saveComment.map(item => (
+                <div className="suggestion" key={item.id}>
+                  <img src="./images/shin/default profile.png" alt="default" />
+                  <p>{item.id}</p>
+                </div>
+              ))}
             </div>
 
             <div className="recommendation">
@@ -243,6 +249,12 @@ const JeounghoMain = () => {
                 <p>회원님을 위한 추천</p>
                 <strong>모두 보기</strong>
               </div>
+              {saveComment.map(item => (
+                <div className="suggestion" key={item.id}>
+                  <img src="./images/shin/default profile.png" alt="default" />
+                  <p>{item.id}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

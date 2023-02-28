@@ -1,6 +1,6 @@
 import React from 'react';
-import './Team.scss';
 import { useNavigate } from 'react-router-dom/dist';
+import './Team.scss';
 
 const Team = () => {
   const navigate = useNavigate();
