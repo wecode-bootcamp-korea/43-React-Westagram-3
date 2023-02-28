@@ -5,7 +5,7 @@
   height: 100vh;
   background-color: #fafafa;
 
-  .login_box {
+  .loginBox {
     @include flexCenter;
     flex-direction: column;
     width: 350px;
@@ -40,7 +40,7 @@
         cursor: pointer;
       }
     }
-    .forgot_pw {
+    .forgotPw {
       color: rgb(0, 0, 143);
       font-size: 12px;
       text-decoration: none;

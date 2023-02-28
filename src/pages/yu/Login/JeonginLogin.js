@@ -25,12 +25,12 @@ const JeonginLogin = () => {
 
   return (
     <main className="login">
-      <div className="login_box">
-        <h1 className="westagram_login">Westagram</h1>
+      <div className="loginBox">
+        <h1 className="westagramLogin">Westagram</h1>
         <input
           onChange={saveUserId}
           value={id}
-          className="login_id"
+          className="loginId"
           type="name"
           placeholder=" 전화번호,
         사용자이름 또는 이메일"
@@ -40,21 +40,20 @@ const JeonginLogin = () => {
           onChange={saveUserPw}
           value={pw}
           onKeyDown={e => handleSubmit(e)}
-          className="login_pw"
+          className="loginPw"
           type="password"
           placeholder="
         비밀번호"
           required
         />
         <button
-          id="LoginBtn"
           className={isInputValue ? 'buttonLoginAble' : 'buttonLoginDisable'}
           disabled={!isInputValue}
           onClick={goToMain}
         >
           로그인
         </button>
-        <div className="forgot_pw">비밀번호를 잊으셨나요?</div>
+        <div className="forgotPw">비밀번호를 잊으셨나요?</div>
       </div>
     </main>
   );

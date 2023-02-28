@@ -13,7 +13,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
 
-    .nav_container {
+    .navContainer {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -22,12 +22,12 @@
       font-family: 'westagram';
       font-size: 30px;
 
-      .nav_logo {
+      .navLogo {
         width: 30px;
         height: 30px;
       }
 
-      .nav_vertical_line {
+      .navVerticalLine {
         height: 30px;
         border: 1px solid black;
       }
@@ -37,7 +37,7 @@
       }
     }
 
-    .nav_searchbar {
+    .navSearchbar {
       display: flex;
       position: relative;
       align-items: center;
@@ -85,12 +85,12 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: #fff;
 
-        .article-top {
+        .articleTop {
           display: flex;
           align-items: center;
           height: 50px;
 
-          .article_avatar {
+          .articleAvatar {
             width: 35px;
             height: 35px;
             margin-left: 10px;
@@ -103,57 +103,57 @@
           }
         }
 
-        .aricle_image {
+        .aricleImage {
           width: 500px;
           height: 400px;
         }
 
-        .article_bottom {
+        .articleBottom {
           margin-left: 10px;
 
-          .button_bar {
+          .buttonBar {
             display: flex;
             justify-content: space-between;
             margin: 10px 0px 10px 0px;
             margin-left: 5px;
           }
-          .contents_great {
+          .contentsGreat {
             display: flex;
             align-items: center;
 
-            .contents_avatar {
+            .contentsAvatar {
               width: 30px;
               height: 30px;
               margin-right: 10px;
               border-radius: 100%;
             }
           }
-          .user_name {
+          .userName {
             font-size: 16px;
             font-weight: 600;
           }
-          .user_comment {
+          .userComment {
             margin-left: 10px;
             font-size: 15px;
           }
-          .user_more {
+          .userMore {
             opacity: 0.5;
             font-size: 14px;
           }
-          .user_time {
+          .userTime {
             margin: 5px 0px 15px 0px;
             font-size: 12px;
             font-weight: 700;
           }
         }
-        .comment_user_id {
+        .commentUserId {
           margin: 0px 10px;
           font-size: 15px;
           font-weight: 600;
         }
       }
 
-      .comment_submit {
+      .commentSubmit {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -161,13 +161,13 @@
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         color: rgba(0, 0, 0, 0.3);
 
-        .comment_text {
+        .commentText {
           width: 450px;
           height: 30px;
           margin-left: 10px;
           border: none;
         }
-        .comment_submit {
+        .commentSubmit {
           justify-content: center;
           width: 40px;
           height: 22px;
@@ -184,28 +184,28 @@
     }
   }
 
-  .side_bar {
+  .sideBar {
     justify-content: column;
     width: 300px;
     max-width: 300px;
     margin-left: 20px;
 
-    .side_bar_top {
+    .sideBarTop {
       display: flex;
       align-items: center;
       justify-content: left;
       height: 50px;
       margin: 5px 0px 10px 0px;
 
-      .wecode_text {
+      .wecodeText {
         margin-left: 10px;
       }
-      .side_bar_avatar {
+      .sideBarAvatar {
         width: 40px;
         height: 40px;
         border-radius: 100%;
       }
-      .avatar_text {
+      .avatarText {
         align-items: center;
         justify-content: center;
         margin-left: 10px;
@@ -213,7 +213,7 @@
         .name {
           font-weight: 500;
         }
-        .nickname {
+        .nickName {
           opacity: 0.5;
           font-size: 13px;
           font-weight: 100;
@@ -227,16 +227,16 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #fff;
 
-      .story_top {
+      .storyTop {
         display: flex;
         justify-content: space-between;
         margin: 0px 10px 0px 10px;
       }
 
-      .story_list {
+      .storyList {
         display: flex;
 
-        .story_person {
+        .storyPerson {
           display: flex;
           align-items: center;
 
@@ -245,7 +245,7 @@
             margin: 0px 10px 0px 10px;
             border-radius: 100%;
           }
-          .avatar_time {
+          .avatarTime {
             opacity: 0.6;
             font-size: 12px;
           }
@@ -259,13 +259,13 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       background-color: #fff;
 
-      .recommend_top {
+      .recommendTop {
         display: flex;
         justify-content: space-between;
         margin: 0px 10px 0px 10px;
       }
 
-      .recommend_person {
+      .recommendPerson {
         display: flex;
         align-items: center;
 
@@ -275,13 +275,13 @@
           border-radius: 100%;
         }
 
-        .follow_person {
+        .followPerson {
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 230px;
 
-          .person_time {
+          .personTime {
             opacity: 0.6;
             font-size: 12px;
           }
