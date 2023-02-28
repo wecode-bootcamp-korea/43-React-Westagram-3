@@ -50,21 +50,26 @@
           font-weight: bold;
         }
       }
-
-      .center_login {
-        width: 339px;
-        height: 40px;
-        margin-top: 20px;
+      .buttonLogin {
+        width: 268px;
+        height: 30px;
+        margin: 8px 40px 8px 40px;
         border: none;
         border-radius: 5px;
-        background-color: blue;
-        background-color: rgba(0, 162, 255, 0.3);
+        background-color: #0095f6;
         color: white;
-        font-size: 18px;
-        font-weight: bold;
+      }
+
+      .buttonLoginDisabled {
+        width: 268px;
+        height: 30px;
+        margin: 8px 40px 8px 40px;
+        border: none;
+        border-radius: 5px;
+        background-color: #b2dffc;
+        color: white;
       }
     }
-
     .content_foot {
       margin-top: 100px;
       color: blue;

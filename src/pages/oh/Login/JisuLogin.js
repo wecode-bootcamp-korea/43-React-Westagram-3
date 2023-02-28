@@ -15,6 +15,7 @@ const JisuLogin = () => {
   const saveUserPw = e => {
     setPw(e.target.value);
   };
+  const center_login = id.includes('@') && pw.length >= 5;
   return (
     <div className="login">
       <div className="content">
@@ -37,7 +38,11 @@ const JisuLogin = () => {
               onChange={saveUserPw}
             />
           </div>
-          <button className="center_login" onClick={goToMain}>
+          <button
+            className={center_login ? 'buttonLogin' : 'buttonLoginDisabled'}
+            disabled={center_login ? 'false' : 'true'}
+            onClick={goToMain}
+          >
             로그인
           </button>
         </div>
@@ -49,4 +54,5 @@ const JisuLogin = () => {
     </div>
   );
 };
+
 export default JisuLogin;
