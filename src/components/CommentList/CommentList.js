@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import '../CommentList/CommentList.scss';
 
 const CommentList = props => {
-  const { text } = props;
-  const { active, setActive } = props;
-  const { changeClass } = props;
+  const { text, active, changeClass } = props;
 
   const commentList = text.map(data => (
     <li key={data.id}>
