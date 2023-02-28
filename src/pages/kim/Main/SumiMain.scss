@@ -1,134 +1,136 @@
 /* header */
-.navWesta {
-  border-bottom: 1px solid #dedede;
-  background-color: #fff;
-}
 
-.innerNav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  width: 853px;
-  height: 60px;
-  margin: 0 auto;
-
-  .titLogo {
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
+.sumiMain {
+  .navWesta {
+    border-bottom: 1px solid #dedede;
+    background-color: #fff;
   }
 
-  .linkLogo {
-    display: block;
+  .innerNav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 853px;
+    height: 60px;
+    margin: 0 auto;
 
-    &:hover {
-      text-decoration: none;
+    .titLogo {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
     }
-  }
 
-  .inpSearch {
-    box-sizing: border-box;
-    width: 268px;
-    height: 30px;
-    padding: 5px 20px;
-    border: 1px solid #dedede;
-    border-radius: 30px;
-  }
+    .linkLogo {
+      display: block;
 
-  .wrapSearch {
-    position: relative;
-  }
+      &:hover {
+        text-decoration: none;
+      }
+    }
 
-  .listUtil {
-    font-size: 0;
+    .inpSearch {
+      box-sizing: border-box;
+      width: 268px;
+      height: 30px;
+      padding: 5px 20px;
+      border: 1px solid #dedede;
+      border-radius: 30px;
+    }
 
-    li {
-      display: inline-block;
-      vertical-align: top;
+    .wrapSearch {
+      position: relative;
+    }
 
-      .linkUtil {
+    .listUtil {
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+
+        .linkUtil {
+          display: block;
+          width: 23px;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .listUser {
+      position: absolute;
+      z-index: 10;
+      top: 45px;
+      left: 0;
+      width: 330px;
+      padding: 10px 0;
+      border: 1px solid #dedede;
+      border-radius: 10px;
+      background-color: #fff;
+
+      .linkUser {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 7px 15px;
+      }
+
+      .areaThumb {
+        width: 40px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+
+      .thumbUser {
         display: block;
-        width: 23px;
-        margin: 0 10px;
+        padding-top: 100%;
+        background-size: cover;
+      }
+
+      .groupInfo {
+        width: 230px;
+        padding-left: 15px;
+      }
+
+      .titUser {
+        display: block;
+        overflow: hidden;
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .txtInfo {
+        display: block;
+        overflow: hidden;
+        color: #888;
+        font-size: 12px;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
 
-  .listUser {
-    position: absolute;
-    z-index: 10;
-    top: 45px;
-    left: 0;
-    width: 330px;
-    padding: 10px 0;
-    border: 1px solid #dedede;
-    border-radius: 10px;
-    background-color: #fff;
-
-    .linkUser {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      padding: 7px 15px;
-    }
-
-    .areaThumb {
-      width: 40px;
-      overflow: hidden;
-      border-radius: 100%;
-    }
-
-    .thumbUser {
-      display: block;
-      padding-top: 100%;
-      background-size: cover;
-    }
-
-    .groupInfo {
-      width: 230px;
-      padding-left: 15px;
-    }
-
-    .titUser {
-      display: block;
-      overflow: hidden;
-      color: #222;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 18px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .txtInfo {
-      display: block;
-      overflow: hidden;
-      color: #888;
-      font-size: 12px;
-      line-height: 18px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  /* 메인 */
+  .contentWesta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 853px;
+    margin: 50px auto;
   }
-}
 
-/* 메인 */
-.contentWesta {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  width: 853px;
-  margin: 50px auto;
-}
-
-.instaFeed {
-  width: 470px;
-
+  .instaFeed {
+    width: 470px;
+  }
   .listInsta {
     background-color: #fff;
 
@@ -366,186 +368,186 @@
       }
     }
   }
-}
 
-.asideInsta {
-  width: 319px;
-  padding-top: 15px;
+  .asideInsta {
+    width: 319px;
+    padding-top: 15px;
 
-  .linkUser {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-
-    .wrapThumb {
-      position: relative;
-      width: 56px;
-      overflow: hidden;
-      border-radius: 100%;
-    }
-
-    .thumbUser {
-      display: block;
-      padding-top: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding-top: 100%;
-        background-color: rgba(0, 0, 0, 0.05);
-      }
-    }
-
-    .infoUser {
-      display: block;
-      padding-left: 15px;
-    }
-
-    .titUser {
-      display: block;
-      color: #222;
-      font-size: 14px;
-      line-height: 18px;
-    }
-
-    .txtInfo {
-      display: block;
-      padding-top: 3px;
-      color: #888;
-      font-size: 14px;
-      line-height: 18px;
-    }
-  }
-
-  .boxInfo {
-    position: relative;
-    margin-top: 15px;
-    overflow: hidden;
-
-    .listInfo {
-      margin-left: 3px;
-
-      li {
-        position: relative;
-        margin-bottom: 16px;
-      }
-    }
-
-    .titInfo {
-      display: block;
-      padding-bottom: 15px;
-      color: #222;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 20px;
-    }
-
-    .linkMore {
-      position: absolute;
-      color: #888;
-      font-size: 12px;
-      line-height: 18px;
-    }
-
-    .linkProfile {
+    .linkUser {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
-    }
+      align-items: center;
 
-    .thumbProfile {
-      position: relative;
-      width: 32px;
-      overflow: hidden;
-      border-radius: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      & ::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        box-sizing: border-box;
-        border: 1px solid #dedede;
+      .wrapThumb {
+        position: relative;
+        width: 56px;
+        overflow: hidden;
         border-radius: 100%;
-        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      .thumbUser {
+        display: block;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding-top: 100%;
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .infoUser {
+        display: block;
+        padding-left: 15px;
+      }
+
+      .titUser {
+        display: block;
+        color: #222;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .txtInfo {
+        display: block;
+        padding-top: 3px;
+        color: #888;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
 
-    .infoUser {
-      padding-left: 12px;
-    }
-
-    .titUser {
-      display: block;
-      color: #222;
-      font-size: 14px;
-      line-height: 16px;
-    }
-
-    .numDate,
-    .txtInfo {
-      display: block;
-      width: 150px;
+    .boxInfo {
+      position: relative;
+      margin-top: 15px;
       overflow: hidden;
+
+      .listInfo {
+        margin-left: 3px;
+
+        li {
+          position: relative;
+          margin-bottom: 16px;
+        }
+      }
+
+      .titInfo {
+        display: block;
+        padding-bottom: 15px;
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+      }
+
+      .linkMore {
+        position: absolute;
+        color: #888;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .linkProfile {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      .thumbProfile {
+        position: relative;
+        width: 32px;
+        overflow: hidden;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & ::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          box-sizing: border-box;
+          border: 1px solid #dedede;
+          border-radius: 100%;
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .infoUser {
+        padding-left: 12px;
+      }
+
+      .titUser {
+        display: block;
+        color: #222;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .numDate,
+      .txtInfo {
+        display: block;
+        width: 150px;
+        overflow: hidden;
+        color: #888;
+        font-size: 12px;
+        line-height: 16px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+
+      .btnFollow {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        color: #3578e5;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .instaFooter {
+    padding-top: 20px;
+
+    .listCorp {
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+      }
+
+      li + li ::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -1px;
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #888;
+      }
+    }
+
+    .txtCopy {
+      padding-top: 10px;
       color: #888;
       font-size: 12px;
-      line-height: 16px;
-      text-overflow: ellipsis;
-      word-break: break-all;
-      white-space: nowrap;
+      line-height: 15px;
     }
-
-    .btnFollow {
-      position: absolute;
-      top: 8px;
-      right: 0;
-      color: #3578e5;
-      font-size: 13px;
-      font-weight: bold;
-      line-height: 18px;
-    }
-  }
-}
-
-.instaFooter {
-  padding-top: 20px;
-
-  .listCorp {
-    font-size: 0;
-
-    li {
-      display: inline-block;
-      position: relative;
-      vertical-align: top;
-    }
-
-    li + li ::after {
-      content: '';
-      position: absolute;
-      top: 9px;
-      left: -1px;
-      width: 2px;
-      height: 2px;
-      border-radius: 100%;
-      background-color: #888;
-    }
-  }
-
-  .txtCopy {
-    padding-top: 10px;
-    color: #888;
-    font-size: 12px;
-    line-height: 15px;
   }
 }

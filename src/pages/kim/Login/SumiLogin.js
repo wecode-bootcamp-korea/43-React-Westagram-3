@@ -54,7 +54,7 @@ const SumiLogin = () => {
             <input
               type="password"
               name="pw"
-              className="inpPsassword"
+              className="inpPassword"
               placeholder="비밀번호"
               title="비밀번호"
               onChange={saveUserPw}

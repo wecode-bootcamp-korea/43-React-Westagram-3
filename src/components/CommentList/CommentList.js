@@ -3,6 +3,8 @@ import '../CommentList/CommentList.scss';
 
 const CommentList = props => {
   const { text } = props;
+  const { active, setActive } = props;
+  const { changeClass } = props;
 
   const commentList = text.map(data => (
     <li key={data.id}>
@@ -12,7 +14,11 @@ const CommentList = props => {
       </a>
       <span className="screenOut">댓글 내용: </span>
       {data.comment}
-      <button className="btnLike" type="button">
+      <button
+        className={`btnLike ${active ? 'on' : ''}`}
+        type="button"
+        onClick={changeClass}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           aria-label="좋아요"

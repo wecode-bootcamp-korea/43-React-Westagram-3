@@ -7,6 +7,7 @@ const SumiMain = () => {
   const [comment, setComment] = useState('');
   const [isSubmit, setIsSubmit] = useState(false);
   const [text, setText] = useState([]);
+  const [active, setActive] = useState(false);
 
   const handleOnChange = e => {
     setComment(e.target.value);
@@ -18,6 +19,11 @@ const SumiMain = () => {
     const newItem = { id: Math.random(), comment: comment };
     setText([...text, newItem]);
     e.target.reset();
+  };
+
+  const changeClass = () => {
+    // setActive(!active);
+    console.log('dddd');
   };
 
   return (
@@ -169,7 +175,7 @@ const SumiMain = () => {
                 {isSubmit && <strong className="screenOut">댓글 리스트</strong>}
                 {isSubmit && (
                   <ul className="listComment">
-                    <CommentList text={text} />
+                    <CommentList text={text} onClick={changeClass} />
                   </ul>
                 )}
               </div>
