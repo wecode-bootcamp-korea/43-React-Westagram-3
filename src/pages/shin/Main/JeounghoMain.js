@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Comment from '../../../components/Comment/Comment';
 import profile from '../../../assets/shin/KakaoTalk_20230213_204309040.jpg';
 import posted from '../../../assets/shin/KakaoTalk_20230214_161243133.jpg';
@@ -6,8 +6,8 @@ import building from '../../../assets/shin/KakaoTalk_20230216_100337086.jpg';
 import './JeounghoMain.scss';
 
 const JeounghoMain = () => {
-  const [show, setShow] = useState(false);
-  const [heart, setHeart] = useState(false);
+  const [isminiMemu, setIsMiniMemu] = useState(false);
+  const [isheart, setIsHeart] = useState(false);
   const [comment, setComment] = useState('');
   const [saveComment, setSaveComment] = useState([]);
   const [numberComments, setNumberComments] = useState(0);
@@ -15,17 +15,22 @@ const JeounghoMain = () => {
   const [idValueFind, setIdValueFind] = useState('');
   const [foundId, setFoundId] = useState([]);
   const [isIdArea, setIsIdArea] = useState('hidden');
+  const [mainData, setMainData] = useState([]);
 
-  if (numberlike < 0) {
-    setNumberLike(0);
-  }
+  useEffect(() => {
+    fetch('./data/mainData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => [setMainData(data)]);
+  }, []);
 
-  const menuToggle = () => {
-    setShow(show => !show);
+  const miniMenuToggle = () => {
+    setIsMiniMemu(!isminiMemu);
   };
 
   const heartToggle = () => {
-    setHeart(heart => !heart);
+    setIsHeart(!isheart);
   };
 
   const changeComment = e => {
@@ -37,33 +42,24 @@ const JeounghoMain = () => {
   };
 
   const idReach = idValueFind => {
-    if (idValueFind) {
-      setFoundId(
-        saveComment
-          .filter(item => item.id.includes(idValueFind))
-          .map(item => item.id)
-      );
-      setIsIdArea('');
-    } else {
-      setFoundId([]);
-      setIsIdArea('hidden');
-    }
+    return idValueFind
+      ? (setFoundId(
+          saveComment
+            .filter(item => item.id.includes(idValueFind))
+            .map(item => item.id)
+        ),
+        setIsIdArea(''))
+      : (setFoundId([]), setIsIdArea('hidden'));
   };
 
   const commitCreate = e => {
-    if (e.key === 'Enter') {
-      if (comment.length > 0) {
-        commentInformation();
-        setComment('');
-      }
-    }
+    return e.key === 'Enter' && comment.length > 0
+      ? (commentInformation(), setComment(''))
+      : '';
   };
 
   const postButton = () => {
-    if (comment.length > 0) {
-      commentInformation();
-      setComment('');
-    }
+    return comment.length > 0 ? (commentInformation(), setComment('')) : '';
   };
 
   const commentInformation = () => {
@@ -78,14 +74,11 @@ const JeounghoMain = () => {
 
   const likeToggle = item => {
     saveComment.filter(items => {
-      if (items.id === item.id && !item.up) {
-        item.up = !item.up;
-        setNumberLike(numberlike + 1);
-      } else if (items.id === item.id && item.up) {
-        item.up = !item.up;
-        setNumberLike(numberlike - 1);
-      }
-      return item;
+      return items.id === item.id && !item.up
+        ? ((item.up = !item.up), setNumberLike(numberlike + 1))
+        : items.id === item.id && item.up
+        ? ((item.up = !item.up), setNumberLike(numberlike - 1))
+        : item;
     });
   };
 
@@ -96,7 +89,9 @@ const JeounghoMain = () => {
       })
     );
     setNumberComments(numberComments - 1);
-    setNumberLike(numberlike - 1);
+    if (item.up === true) {
+      setNumberLike(numberlike - 1);
+    }
   };
 
   const random = () => {
@@ -135,27 +130,21 @@ const JeounghoMain = () => {
             <img src="./images/shin/explore.png" alt="explore logo" />
             <img src="./images/shin/heart.png" alt="heart logo" />
             <img
-              onClick={menuToggle}
+              onClick={miniMenuToggle}
               src="./images/shin/profile.png"
               alt="profile logo"
             />
           </div>
         </div>
-        <div className={show ? 'menuBoxClicked ' : 'menuBox '}>
+        <div className={isminiMemu ? 'menuBoxClicked ' : 'menuBox '}>
           <ul>
-            <li>
-              <i className="bi bi-person-circle" />
-              프로필
-            </li>
-            <li>
-              <i className="bi bi-bookmark" />
-              저장됨
-            </li>
-            <li>
-              <i className="bi bi-gear-wide" /> 설정
-            </li>
+            {mainData.map(item => (
+              <li key={item.id}>
+                <i className={item.className} />
+                {item.text}
+              </li>
+            ))}
           </ul>
-          <p>로그아웃</p>
         </div>
       </nav>
 
@@ -176,7 +165,7 @@ const JeounghoMain = () => {
                 <i
                   onClick={heartToggle}
                   className={
-                    heart
+                    isheart
                       ? 'bi bi-suit-heart-fill clicked'
                       : 'bi bi-suit-heart-fill'
                   }
@@ -222,7 +211,7 @@ const JeounghoMain = () => {
           </div>
         </div>
 
-        <div className="mainRight">
+        <div className="subMain">
           <div className="article">
             <div className="information">
               <div className="profile">
@@ -256,6 +245,11 @@ const JeounghoMain = () => {
                 </div>
               ))}
             </div>
+            <div className="footer">
+              {FOOTER.map(item => (
+                <span key={item.id}>{item.text} • </span>
+              ))}
+            </div>
           </div>
         </div>
       </main>
@@ -264,3 +258,17 @@ const JeounghoMain = () => {
 };
 
 export default JeounghoMain;
+
+const FOOTER = [
+  { id: 1, text: '소개' },
+  { id: 2, text: '도움말' },
+  { id: 3, text: '홍보센터' },
+  { id: 4, text: 'API' },
+  { id: 5, text: '채용 정보' },
+  { id: 6, text: '개인정보처리방침' },
+  { id: 7, text: '약관' },
+  { id: 8, text: '위치' },
+  { id: 9, text: '인기계정' },
+  { id: 10, text: '해시태그' },
+  { id: 11, text: '언어' },
+];

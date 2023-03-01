@@ -20,13 +20,13 @@ function JeounghoLogin() {
     e.preventDefault();
   };
 
-  const onKeyUp = validity => {
+  const validation = validity => {
     return id.includes('@') && password.length >= 5
       ? setValidity(!validity)
       : setValidity(validity);
   };
 
-  const handleClick = () => {
+  const movePage = () => {
     return (
       id.includes('@') &&
       password.length >= 5(alert('로그인 성공'), navigate('/jeoungho-Main'))
@@ -45,7 +45,7 @@ function JeounghoLogin() {
           placeholder="이메일"
           value={id}
           onChange={changeId}
-          onKeyUp={onKeyUp}
+          onKeyUp={validation}
         />
         <input
           className="inputArea"
@@ -54,12 +54,12 @@ function JeounghoLogin() {
           autoComplete="off"
           value={password}
           onChange={changePassword}
-          onKeyUp={onKeyUp}
+          onKeyUp={validation}
         />
         <button
           disabled={validity}
           className={validity ? 'defaultLogin' : 'changeLogin'}
-          onClick={handleClick}
+          onClick={movePage}
         >
           로그인
         </button>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "className": "bi bi-person-circle",
+    "text": "프로필"
+  },
+  {
+    "id": 2,
+    "className": "bi bi-bookmark",
+    "text": "저장됨"
+  },
+  {
+    "id": 3,
+    "className": "bi bi-gear-wide",
+    "text": "설정"
+  },
+  {
+    "id": 4,
+    "className": "bi bi-door-closed",
+    "text": "로그아웃"
+  }
+]
