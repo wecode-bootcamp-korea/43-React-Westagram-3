@@ -69,123 +69,127 @@
       }
     }
   }
+  .articleBox {
+    margin-top: 50px;
 
-  article {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin-top: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-
-    .articleTop {
+    article {
       display: flex;
-      align-items: center;
-      height: 50px;
-
-      .articleAvatar {
-        width: 35px;
-        height: 35px;
-        margin-left: 10px;
-        border-radius: 100%;
-      }
-
-      h2 {
-        margin-left: 20px;
-        font-size: 16px;
-      }
-    }
-
-    .aricleImage {
+      flex-direction: column;
       width: 500px;
-      height: 400px;
-    }
-    .articleBottom {
-      margin-left: 10px;
-
-      .buttonBar {
-        display: flex;
-        justify-content: space-between;
-        margin: 10px 0px 10px 0px;
-        margin-left: 5px;
+      margin-top: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      .article {
+        width: 500px;
       }
-      .contentsGreat {
+      .articleTop {
         display: flex;
         align-items: center;
+        height: 50px;
 
-        .contentsAvatar {
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
+        .articleAvatar {
+          width: 35px;
+          height: 35px;
+          margin-left: 10px;
           border-radius: 100%;
         }
+
+        h2 {
+          margin-left: 20px;
+          font-size: 16px;
+        }
       }
-      .userName {
-        font-size: 16px;
-        font-weight: 600;
+
+      .aricleImage {
+        width: 500px;
+        height: 400px;
       }
-      .userComment {
+      .articleBottom {
         margin-left: 10px;
-        font-size: 15px;
+
+        .buttonBar {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px 0px 10px 0px;
+          margin-left: 5px;
+        }
+        .contentsGreat {
+          display: flex;
+          align-items: center;
+
+          .contentsAvatar {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 100%;
+          }
+        }
+        .userName {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .userComment {
+          margin-left: 10px;
+          font-size: 15px;
+        }
+        .userMore {
+          opacity: 0.5;
+          font-size: 14px;
+        }
+        .userTime {
+          margin: 5px 0px 15px 0px;
+          font-size: 12px;
+          font-weight: 700;
+        }
       }
-      .userMore {
-        opacity: 0.5;
-        font-size: 14px;
-      }
-      .userTime {
-        margin: 5px 0px 15px 0px;
-        font-size: 12px;
-        font-weight: 700;
+
+      .commentUserBox {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 10px;
+
+        .commentUserId {
+          margin-right: 10px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .commentUserHeart {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
 
-    .commentUserBox {
-      display: flex;
-      justify-content: space-between;
-      margin: 0px 10px;
-
-      .commentUserId {
-        margin-right: 10px;
-        font-size: 15px;
-        font-weight: 600;
-      }
-      .commentUserHeart {
-        width: 12px;
-        height: 12px;
-      }
-    }
-  }
-
-  .commentSubmit {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.3);
-
-    .commentText {
-      width: 450px;
-      height: 30px;
-      margin-left: 10px;
-      border: none;
-    }
     .commentSubmit {
-      justify-content: center;
-      width: 40px;
-      height: 22px;
-      margin-right: 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: rgb(222, 237, 246);
-      color: rgb(76, 181, 249);
-      &:hover {
-        background-color: rgb(188, 228, 254);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.3);
+
+      .commentText {
+        width: 450px;
+        height: 30px;
+        margin-left: 10px;
+        border: none;
+      }
+      .commentSubmit {
+        justify-content: center;
+        width: 40px;
+        height: 22px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(222, 237, 246);
+        color: rgb(76, 181, 249);
+        &:hover {
+          background-color: rgb(188, 228, 254);
+        }
       }
     }
   }
 }
-
 .aside {
   justify-content: column;
   width: 300px;

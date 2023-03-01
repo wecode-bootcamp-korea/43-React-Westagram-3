@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import JeonginComment from './JeonginComment';
 import INFO_LIST from './jeongin_info';
 import '../../../pages/yu/Main/JeonginMain.scss';
@@ -9,6 +9,7 @@ const JeonginMain = () => {
   const [comments, setComments] = useState([]);
   const [nextId, setNextId] = useState(0);
   const commentInput = useRef('');
+  const [cat, setCat] = useState();
 
   const onChange = e => {
     setInput(e.target.value);
@@ -23,6 +24,16 @@ const JeonginMain = () => {
     setComments(newComments);
     setInput('');
   };
+
+  useEffect(() => {
+    fetch('/data/feed.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCat(data);
+      });
+  }, []);
 
   const commentList = comments.map(comment => (
     <li className="commentUserBox" key={comment.id}>
@@ -54,44 +65,49 @@ const JeonginMain = () => {
         </div>
       </div>
 
-      <article>
-        <div className="articleTop">
-          <img className="articleAvatar" src="/images/yu/wecode.jpeg" />
-          <h2>wecode_bootcamp</h2>
-        </div>
-        <img className="articleImage" src="/images/yu/wecode_article.png" />
-        <div className="articleBottom">
-          <div className="buttonBar">
-            <div className="buttonBarLeft" />
-            <div className="buttonBarRight" />
-          </div>
-          <div className="contentsGreat">
-            <img className="contentsAvatar" src="/images/yu/person1.png" />
-            <span>wecode_zzang님 외 4명이 좋아합니다.</span>
-          </div>
-          <span className="userName">wecode_bootcamp</span>
-          <span className="userComment">
-            "위코드는 단순 교육업체가 아닌 개발자 커뮤니티입니다. Wecode에서
-            배우고 저는 총 5개 회사에서 오퍼를 받았습니다."
-          </span>
-          <span className="userMore">...더보기</span>
-          <div className="userTime">54분전</div>
-        </div>
-        <div className="addUserComment">
-          <JeonginComment commentList={commentList} />
-        </div>
-        <form className="commentSubmit" onSubmit={submit}>
-          <input
-            className="commentText"
-            type="text"
-            placeholder="댓글 달기..."
-            onChange={onChange}
-            ref={commentInput}
-            value={input}
-          />
-          <button className="commentSubmit">게시</button>
-        </form>
-      </article>
+      <div className="articleBox">
+        {cat &&
+          cat.map((cat, key) => (
+            <article key={key}>
+              <div className="articleTop">
+                <img className="articleAvatar" src={`${cat.article_image}`} />
+                <h2>{cat.insta_id}</h2>
+              </div>
+              <img className="articleImage" src={`${cat.article_image}`} />
+              <div className="articleBottom">
+                <div className="buttonBar">
+                  <div className="buttonBarLeft" />
+                  <div className="buttonBarRight" />
+                </div>
+                <div className="contentsGreat">
+                  <img
+                    className="contentsAvatar"
+                    src="/images/yu/person1.png"
+                  />
+                  <span>wecode_zzang님 외 4명이 좋아합니다.</span>
+                </div>
+                <span className="userName">{cat.insta_id}</span>
+                <span className="userComment">{cat.article_comment}</span>
+                <span className="userMore">...더보기</span>
+                <div className="userTime">54분전</div>
+              </div>
+              <div className="addUserComment">
+                <JeonginComment commentList={commentList} />
+              </div>
+              <form className="commentSubmit" onSubmit={submit}>
+                <input
+                  className="commentText"
+                  type="text"
+                  placeholder="댓글 달기..."
+                  onChange={onChange}
+                  ref={commentInput}
+                  value={input}
+                />
+                <button className="commentSubmit">게시</button>
+              </form>
+            </article>
+          ))}
+      </div>
 
       <div className="aside">
         <div className="asideTop">
