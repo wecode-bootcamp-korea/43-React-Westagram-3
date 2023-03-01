@@ -89,9 +89,7 @@ const JeounghoMain = () => {
       })
     );
     setNumberComments(numberComments - 1);
-    if (item.up === true) {
-      setNumberLike(numberlike - 1);
-    }
+    return item.up === true ? setNumberLike(numberlike - 1) : '';
   };
 
   const random = () => {
