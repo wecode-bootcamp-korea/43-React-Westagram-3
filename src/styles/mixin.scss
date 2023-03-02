@@ -1,0 +1,25 @@
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin buttonLogin {
+  width: 258px;
+  height: 30px;
+  margin: 15px 0px 50px 0px;
+  border: none rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: #fafafa;
+}
+
+@mixin iconSize {
+  width: 30px;
+  height: 30px;
+}
+
+@mixin sideBoxTop {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}

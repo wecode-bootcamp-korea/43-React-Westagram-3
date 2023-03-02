@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Team from './components/Team/Team';
 import JisuLogin from './pages/oh/Login/JisuLogin';
 import JisuMain from './pages/oh/Main/JisuMain';
 
@@ -16,6 +17,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Team />} />
         <Route path="/jisu-Login" element={<JisuLogin />} />
         <Route path="/jisu-Main" element={<JisuMain />} />
 

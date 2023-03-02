@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "insta_id": "wecode_bootcamp",
+    "article_image": "/images/yu/wecode_article.png",
+    "article_comment": "오늘도 위코드는 학생들에게 많은 과제를 던져주었습니다.."
+  },
+  {
+    "id": 2,
+    "insta_id": "sad cat",
+    "article_image": "/images/yu/catSelfie1.png",
+    "article_comment": "아 집에 가고싶다."
+  },
+  {
+    "id": 3,
+    "insta_id": "dog cat",
+    "article_image": "/images/yu/catSelfie2.png",
+    "article_comment": "오늘도 과제를 다 끝낼 수 있을까."
+  },
+  {
+    "id": 4,
+    "insta_id": "festival cat",
+    "article_image": "/images/yu/catSelfie3.png",
+    "article_comment": "화려한 미래 나의 모습"
+  }
+]
