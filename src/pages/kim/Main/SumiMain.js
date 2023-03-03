@@ -8,6 +8,7 @@ const SumiMain = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [text, setText] = useState([]);
   const [active, setActive] = useState(false);
+  const [footerInfo, setFooterInfo] = useState([]);
 
   const handleOnChange = e => {
     setComment(e.target.value);
@@ -22,6 +23,16 @@ const SumiMain = () => {
   const changeClass = () => {
     setActive(!active);
   };
+
+  useEffect(() => {
+    fetch('/data/data.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setFooterInfo(data);
+      });
+  }, []);
 
   useEffect(() => {
     if (isSubmit) {
@@ -348,46 +359,13 @@ const SumiMain = () => {
           <footer className="instaFooter">
             <strong className="screenOut">위스타그램 서비스 정보</strong>
             <ul className="listCorp">
-              <li>
-                <Link to="#none" className="linkCorp">
-                  소개
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  도움말
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  홍보 센터
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  채용 정보
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  개인정보처리방침
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  약관
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  위치
-                </Link>
-              </li>
-              <li>
-                <Link to="#none" className="linkCorp">
-                  언어
-                </Link>
-              </li>
+              {footerInfo.map(info => (
+                <li key={info.id}>
+                  <Link to={info.link} className="linkCorp">
+                    {info.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <p className="txtCopy">&#169; 2023 INSTAGRAM FROM META</p>
           </footer>

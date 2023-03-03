@@ -7,9 +7,6 @@ const SumiLogin = () => {
   const [inputPw, setInPutPw] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
   const navigate = useNavigate();
-  const goToMain = () => {
-    navigate('/sumi-Main');
-  };
 
   const saveUserEmail = e => {
     setInputEmail(e.target.value);
@@ -21,6 +18,32 @@ const SumiLogin = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+
+    if (inputEmail.indexOf('@') > -1 && inputPw.length > 5) {
+      fetch('http://10.58.52.56:3000/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8', //필수로 넣어야함
+        },
+        body: JSON.stringify({
+          // 자바스크립트를 json 형태로 보내는 것
+          email: inputEmail,
+          password: inputPw,
+        }),
+      })
+        //요청
+
+        .then(response => response.json())
+        .then(data => {
+          if (data.accessToken) {
+            localStorage.setItem('token', data.accessToken);
+            navigate('/sumi-Main');
+          } else {
+            alert('아이디와 비밀번호가 틀렸습니다. 다시 확인해주세요.');
+          }
+        }); // 콘솔탭에서 어떤데이터인지데이터 확인
+      //응답
+    }
   };
 
   const saveAccount = () => {
@@ -59,19 +82,10 @@ const SumiLogin = () => {
               title="비밀번호"
               onChange={saveUserPw}
             />
-            {inputEmail.indexOf('@') > -1 && inputPw.length > 5 ? (
-              ''
-            ) : (
-              <p className="descError">
-                올바른 이메일 주소와 비밀번호를 입력해주세요.
-              </p>
-            )}
-            <button
-              type="submit"
-              className="btnLogin"
-              disabled={isDisabled}
-              onClick={goToMain}
-            >
+            <p className="descError">
+              올바른 이메일 주소와 비밀번호를 입력해주세요.
+            </p>
+            <button type="submit" className="btnLogin" disabled={isDisabled}>
               로그인
             </button>
           </fieldset>
