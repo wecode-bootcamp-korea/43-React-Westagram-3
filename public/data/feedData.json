@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "profile": "hole123",
+    "profileImg": "/images/shin/KakaoTalk_20230213_204309040.jpg",
+    "postImg": "/images/shin/KakaoTalk_20230214_161243133.jpg"
+  },
+
+  {
+    "id": 2,
+    "profile": "hole456",
+    "profileImg": "/images/shin/KakaoTalk_20230213_204309040.jpg",
+    "postImg": "/images/shin/KakaoTalk_20230214_161243133.jpg"
+  },
+  {
+    "id": 3,
+    "profile": "hole789",
+    "profileImg": "/images/shin/KakaoTalk_20230213_204309040.jpg",
+    "postImg": "/images/shin/KakaoTalk_20230214_161243133.jpg"
+  },
+  {
+    "id": 4,
+    "profile": "hole91011",
+    "profileImg": "/images/shin/KakaoTalk_20230213_204309040.jpg",
+    "postImg": "/images/shin/KakaoTalk_20230214_161243133.jpg"
+  },
+  {
+    "id": 5,
+    "profile": "hole1212314",
+    "profileImg": "/images/shin/KakaoTalk_20230213_204309040.jpg",
+    "postImg": "/images/shin/KakaoTalk_20230214_161243133.jpg"
+  }
+]

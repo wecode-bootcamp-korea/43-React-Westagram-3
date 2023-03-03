@@ -27,10 +27,23 @@ function JeounghoLogin() {
   };
 
   const movePage = () => {
-    return (
-      id.includes('@') &&
-      password.length >= 5(alert('로그인 성공'), navigate('/jeoungho-Main'))
-    );
+    fetch('http://10.58.52.201:8000/auth/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: id,
+        password: password,
+      }),
+    })
+      .then(response => response.json())
+      .then(data =>
+        data.accessToken && id.includes('@') && password.length >= 5
+          ? (localStorage.setItem('token', data.accessToken),
+            navigate('/jeoungho-Main'))
+          : alert('토큰이 없습니다.')
+      );
   };
 
   return (
