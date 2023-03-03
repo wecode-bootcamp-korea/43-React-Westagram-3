@@ -3,8 +3,8 @@ import '../CommentList/CommentList.scss';
 
 const CommentList = props => {
   const { text, active, changeClass } = props;
-  const commentList = text.map(data => (
-    <li key={data.id} value={data.id}>
+  const commentList = text.map((data, key) => (
+    <li key={key} value={key}>
       <span className="screenOut">댓글 작성자: </span>
       <a href="#none" className="linkUser">
         sumi__zz
@@ -27,6 +27,6 @@ const CommentList = props => {
       </button>
     </li>
   ));
-  return <ul>{commentList}</ul>;
+  return <>{commentList}</>;
 };
 export default CommentList;

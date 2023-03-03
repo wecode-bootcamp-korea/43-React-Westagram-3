@@ -9,6 +9,7 @@ const SumiMain = () => {
   const [text, setText] = useState([]);
   const [active, setActive] = useState(false);
   const [footerInfo, setFooterInfo] = useState([]);
+  const [feedData, setFeedData] = useState([]);
 
   const handleOnChange = e => {
     setComment(e.target.value);
@@ -31,6 +32,15 @@ const SumiMain = () => {
       .then(res => res.json())
       .then(data => {
         setFooterInfo(data);
+      });
+  }, []);
+  useEffect(() => {
+    fetch('/data/feedData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(feed => {
+        setFeedData(feed);
       });
   }, []);
 
@@ -97,124 +107,133 @@ const SumiMain = () => {
         <article className="instaFeed">
           <h3 className="screenOut">피드</h3>
           <ul className="listInsta">
-            <li>
-              <Link to="#none" className="linkProfile">
-                <span className="wrapThumb">
-                  <span
-                    className="thumbProfile"
-                    style={{
-                      backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
-                    }}
-                  />
-                </span>
-                <strong className="titUser">
-                  <span className="screenOut">작성자 : </span>wecode_bootcamp
-                </strong>
-                <span className="numDate">
-                  <span className="screenOut">작성 일 : </span>2일
-                </span>
-              </Link>
-              <span className="wrapFeedimg">
-                <span
-                  className="thumbFeed"
-                  style={{
-                    backgroundImage: `url(images/kim/@thumb_960x640.jpg)`,
-                  }}
-                />
-              </span>
-              <div className="utilFeed">
-                <button className="btnLike" type="button">
-                  <img
-                    src="images/kim/ico_like.svg"
-                    className="imgG"
-                    alt="좋아요"
-                  />
-                </button>
-                <button className="btnComment" type="button">
-                  <img
-                    src="images/kim/ico_comment.svg"
-                    className="imgG"
-                    alt="댓글"
-                  />
-                </button>
-                <button className="btnShare" type="button">
-                  <img
-                    src="images/kim/ico_share.svg"
-                    className="imgG"
-                    alt="공유하기"
-                  />
-                </button>
-                <button className="btnBookmark" type="button">
-                  <img
-                    src="images/kim/ico_bookmark.svg"
-                    className="imgG"
-                    alt="즐겨찾기"
-                  />
-                </button>
-              </div>
-              <div className="feedUser">
-                <Link to="#none" className="linkUser">
-                  <span className="screenOut">작성자: </span>wecode_bootcamp
-                </Link>
-                <p className="descFeed">
-                  <span className="screenOut">작성자 소개 : </span>위워크에서
-                  진행한 베이킹 클래스
-                </p>
-                <button type="button" className="btnMore">
-                  <span className="screenOut">내용</span>더보기
-                </button>
-              </div>
-              <div className="groupComment">
-                <Link to="#none" className="linkComment">
-                  댓글 100개 모두 보기
-                </Link>
-                <div className="areaWritebox">
-                  <form
-                    action="#none"
-                    method="post"
-                    name="formComment"
-                    className="formComment"
-                    onSubmit={handleSubmit}
-                  >
-                    <input
-                      aria-label="댓글 달기..."
-                      className="inpComment"
-                      placeholder="댓글 달기..."
-                      onChange={handleOnChange}
+            {feedData &&
+              feedData.map((data, key) => (
+                <li key={key} value={key}>
+                  <Link to={data.profileLink} className="linkProfile">
+                    <span className="wrapThumb">
+                      <span
+                        className="thumbProfile"
+                        style={{
+                          backgroundImage: `url(${data.profileImg})`,
+                        }}
+                      />
+                    </span>
+                    <strong className="titUser">
+                      <span className="screenOut">작성자 : </span>
+                      {data.profileId}
+                    </strong>
+                    <span className="numDate">
+                      <span className="screenOut">작성 일 : </span>
+                      {data.date}
+                    </span>
+                  </Link>
+                  <span className="wrapFeedimg">
+                    <span
+                      className="thumbFeed"
+                      style={{
+                        backgroundImage: `url(${data.feedImg})`,
+                      }}
                     />
-                    <button type="submit" className="btnSubmit">
-                      게시
+                  </span>
+                  <div className="utilFeed">
+                    <button className="btnLike" type="button">
+                      <img
+                        src="images/kim/ico_like.svg"
+                        className="imgG"
+                        alt="좋아요"
+                      />
                     </button>
-                  </form>
-                </div>
-                {isSubmit && <strong className="screenOut">댓글 리스트</strong>}
-                {isSubmit && (
-                  <ul className="listComment">
-                    <CommentList
-                      text={text}
-                      active={active}
-                      changeClass={changeClass}
-                    />
-                  </ul>
-                )}
-              </div>
-              <button type="button" className="btnOption">
-                <svg
-                  aria-label="옵션 더 보기"
-                  className="_ab6-"
-                  color="#000"
-                  fill="#000"
-                  height="24"
-                  role="img"
-                  viewBox="0 0 24 24"
-                  width="24"
-                >
-                  <circle cx="12" cy="12" r="1.5" />
-                  <circle cx="6" cy="12" r="1.5" />
-                  <circle cx="18" cy="12" r="1.5" />
-                </svg>
-              </button>
-            </li>
+                    <button className="btnComment" type="button">
+                      <img
+                        src="images/kim/ico_comment.svg"
+                        className="imgG"
+                        alt="댓글"
+                      />
+                    </button>
+                    <button className="btnShare" type="button">
+                      <img
+                        src="images/kim/ico_share.svg"
+                        className="imgG"
+                        alt="공유하기"
+                      />
+                    </button>
+                    <button className="btnBookmark" type="button">
+                      <img
+                        src="images/kim/ico_bookmark.svg"
+                        className="imgG"
+                        alt="즐겨찾기"
+                      />
+                    </button>
+                  </div>
+                  <div className="feedUser">
+                    <Link to="#none" className="linkUser">
+                      <span className="screenOut">작성자: </span>
+                      {data.feedId}
+                    </Link>
+                    <p className="descFeed">
+                      <span className="screenOut">작성자 소개 : </span>
+                      {data.feedDesc}
+                    </p>
+                    <button type="button" className="btnMore">
+                      <span className="screenOut">내용</span>더보기
+                    </button>
+                  </div>
+                  <div className="groupComment">
+                    <Link to="#none" className="linkComment">
+                      댓글 100개 모두 보기
+                    </Link>
+                    <div className="areaWritebox">
+                      <form
+                        action="#none"
+                        method="post"
+                        name="formComment"
+                        className="formComment"
+                        onSubmit={handleSubmit}
+                      >
+                        <input
+                          aria-label="댓글 달기..."
+                          className="inpComment"
+                          placeholder="댓글 달기..."
+                          onChange={handleOnChange}
+                        />
+                        <button type="submit" className="btnSubmit">
+                          게시
+                        </button>
+                      </form>
+                    </div>
+                    {isSubmit && (
+                      <strong className="screenOut">댓글 리스트</strong>
+                    )}
+                    {isSubmit && (
+                      <ul className="listComment">
+                        <CommentList
+                          text={text}
+                          active={active}
+                          changeClass={changeClass}
+                          data={data.id}
+                        />
+                      </ul>
+                    )}
+                  </div>
+                  <button type="button" className="btnOption">
+                    <svg
+                      aria-label="옵션 더 보기"
+                      className="_ab6-"
+                      color="#000"
+                      fill="#000"
+                      height="24"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <circle cx="12" cy="12" r="1.5" />
+                      <circle cx="6" cy="12" r="1.5" />
+                      <circle cx="18" cy="12" r="1.5" />
+                    </svg>
+                  </button>
+                </li>
+              ))}
           </ul>
         </article>
         <aside className="asideInsta">

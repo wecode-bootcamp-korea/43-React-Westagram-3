@@ -191,11 +191,16 @@
 
       .titUser {
         display: block;
+        max-width: 60%;
         padding-left: 10px;
+        overflow: hidden;
         color: #000;
         font-size: 14px;
         font-weight: bold;
         line-height: 18px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
       }
 
       .txtInfo {
@@ -271,11 +276,16 @@
 
       .linkUser {
         display: inline-block;
+        max-width: 30%;
+        overflow: hidden;
         color: #000;
         font-size: 14px;
         font-weight: bold;
         line-height: 18px;
+        text-overflow: ellipsis;
+        word-break: break-all;
         vertical-align: top;
+        white-space: nowrap;
       }
 
       .descFeed {
