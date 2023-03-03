@@ -1,0 +1,455 @@
+.main {
+  .container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    .icon {
+      position: relative;
+
+      .search {
+        width: 250px;
+        height: 30px;
+        text-align: center;
+
+        &::placeholder {
+          text-align: center;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+      }
+      .searchIdArea {
+        position: absolute;
+        width: 250px;
+        max-height: 300px;
+        overflow: auto;
+        background-color: white;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin: 0 10px;
+          border-radius: 50%;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 50px;
+          border-bottom: 1px solid black;
+        }
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          height: 30%;
+          border-radius: 10px;
+          background: green;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: wheat;
+        }
+      }
+
+      .bi-search {
+        position: absolute;
+        top: 23.5%;
+        right: 60%;
+        color: #757575;
+        font-size: 12px;
+      }
+    }
+
+    .imgs {
+      display: flex;
+
+      img {
+        height: 40px;
+        padding: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .menuBox {
+    visibility: hidden;
+    position: absolute;
+    right: 210px;
+    width: 120px;
+    transition: 0.3s ease-out;
+    border: 1px solid;
+    opacity: 0;
+    color: black;
+    cursor: pointer;
+
+    ul {
+      padding: 10px;
+      font-size: 16px;
+      list-style: none;
+    }
+
+    li {
+      padding: 0 0 10px 0;
+    }
+
+    i {
+      padding-right: 10px;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  .menuBoxClicked {
+    visibility: visible;
+    position: absolute;
+    z-index: 10;
+    right: 210px;
+    width: 120px;
+    transition: 0.3s ease-out;
+    border: 1px solid;
+    opacity: 1;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+    ul {
+      padding: 10px;
+      font-size: 16px;
+      list-style: none;
+    }
+
+    li {
+      padding: 0 0 10px 0;
+    }
+
+    i {
+      padding-right: 10px;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  .mainContainer {
+    display: flex;
+    justify-content: center;
+
+    .feeds {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+      margin: 10px 10px;
+
+      .article {
+        width: 90%;
+        margin: 10px auto;
+
+        img {
+          width: 100%;
+          height: 500px;
+          margin: 0;
+          padding: 0;
+          object-fit: cover;
+        }
+
+        .information {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 50px;
+          margin: 0 10px;
+
+          .profile {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+              border-radius: 50%;
+            }
+
+            p {
+              font-weight: bold;
+            }
+          }
+        }
+        .content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 50px;
+          margin: 0 10px;
+          font-size: 30px;
+          cursor: pointer;
+
+          .emotion {
+            .bi-suit-heart-fill {
+              color: black;
+            }
+
+            .bi-suit-heart-fill.clicked {
+              color: red;
+            }
+
+            i {
+              margin-right: 10px;
+            }
+          }
+        }
+        .commentSection {
+          display: flex;
+          align-items: center;
+          height: 30px;
+          margin: 5px 10px;
+
+          img {
+            width: 30px;
+            height: 100%;
+            margin-right: 10px;
+            border-radius: 50%;
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .commentContent {
+          height: 150px;
+          overflow: auto;
+
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            height: 30%;
+            border-radius: 10px;
+            background: green;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: wheat;
+          }
+
+          .contents {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 30px;
+            margin: 0 10px;
+
+            .upThumbs {
+              color: rgb(246, 245, 70);
+            }
+
+            button {
+              margin-right: 10px;
+              border: none;
+              background-color: none;
+              font-size: 20px;
+            }
+          }
+        }
+
+        .wrap {
+          position: relative;
+          padding: 5px 13px;
+
+          .comment {
+            width: 100%;
+            height: 30px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .postingBtn {
+            position: absolute;
+            top: 9px;
+            right: 20px;
+            border: none;
+            background-color: white;
+          }
+        }
+
+        .hearts {
+          margin: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .subMain {
+      width: 30%;
+      margin: 10px;
+
+      .article {
+        width: 60%;
+        margin: 10px auto;
+
+        .information {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 50px;
+          margin: 0 10px;
+
+          .profile {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+              border-radius: 50%;
+            }
+
+            p {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .story {
+          width: 75%;
+          height: 250px;
+          margin: 10px;
+          padding: 10px;
+          overflow: auto;
+          border: 1px solid #c3c0c0;
+
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            height: 30%;
+            border-radius: 10px;
+            background: green;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: wheat;
+          }
+
+          .storyHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+              margin: 0;
+              padding: 0;
+              color: #757575;
+              font-size: 13px;
+            }
+
+            strong {
+              cursor: pointer;
+            }
+          }
+          .suggestion {
+            display: flex;
+            align-items: flex-start;
+            margin: 16px 10px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              margin: 0 10px;
+              border-radius: 50%;
+            }
+
+            p {
+              margin: auto 0;
+            }
+          }
+        }
+
+        .recommendation {
+          width: 75%;
+          height: 250px;
+          margin: 10px;
+          padding: 10px;
+          overflow: auto;
+          border: 1px solid #c3c0c0;
+
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            height: 30%;
+            border-radius: 10px;
+            background: green;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: wheat;
+          }
+
+          .recommendationHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+              margin: 0;
+              padding: 0;
+              color: #757575;
+              font-size: 13px;
+            }
+
+            strong {
+              cursor: pointer;
+            }
+          }
+
+          .suggestion {
+            display: flex;
+            align-items: flex-start;
+            margin: 16px 10px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              margin: 0 10px;
+              border-radius: 50%;
+            }
+
+            p {
+              margin: auto 0;
+            }
+          }
+        }
+
+        .footer {
+          width: 80%;
+          margin: 10px;
+          background-color: #eeeeee;
+        }
+      }
+    }
+  }
+}
