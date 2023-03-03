@@ -6,8 +6,8 @@ import './JeounghoMain.scss';
 const JeounghoMain = () => {
   const [isminiMemu, setIsMiniMemu] = useState(false);
   const [idValueFind, setIdValueFind] = useState('');
-  // const [foundId, setFoundId] = useState([]);
-  // const [isIdArea, setIsIdArea] = useState('hidden');
+  const [foundId, setFoundId] = useState([]);
+  const [isIdArea, setIsIdArea] = useState('hidden');
   const [mainData, setMainData] = useState([]);
   const [mainData2, setMainData2] = useState([]);
 
@@ -35,16 +35,16 @@ const JeounghoMain = () => {
     setIdValueFind(e.target.value);
   };
 
-  // const idReach = idValueFind => {
-  //   return idValueFind
-  //     ? (setFoundId(
-  //         saveComment
-  //           .filter(item => item.id.includes(idValueFind))
-  //           .map(item => item.id)
-  //       ),
-  //       setIsIdArea(''))
-  //     : (setFoundId([]), setIsIdArea('hidden'));
-  // };
+  const idReach = idValueFind => {
+    return idValueFind
+      ? (setFoundId(
+          mainData2
+            .filter(item => item.profile.includes(idValueFind))
+            .map(item => item.profile)
+        ),
+        setIsIdArea(''))
+      : (setFoundId([]), setIsIdArea('hidden'));
+  };
 
   return (
     <div className="main">
@@ -62,16 +62,16 @@ const JeounghoMain = () => {
               placeholder="검색"
               value={idValueFind}
               onChange={changeIdValueFind}
-              // onKeyUp={() => idReach(idValueFind)}
+              onKeyUp={() => idReach(idValueFind)}
             />
-            {/* <ul className={`searchIdArea${isIdArea}`}>
+            <ul className={`searchIdArea${isIdArea}`}>
               {foundId.map(item => (
                 <li key={item}>
                   <img src="./images/shin/default profile.png" alt="default" />
                   {item}
                 </li>
               ))}
-            </ul> */}
+            </ul>
             <i className="bi bi-search" />
           </div>
           <div className="imgs">
@@ -116,12 +116,12 @@ const JeounghoMain = () => {
                 <p>스토리</p>
                 <strong>모두 보기</strong>
               </div>
-              {/* {saveComment.map(item => (
+              {mainData2.map(item => (
                 <div className="suggestion" key={item.id}>
                   <img src="./images/shin/default profile.png" alt="default" />
-                  <p>{item.id}</p>
+                  <p>{item.profile}</p>
                 </div>
-              ))} */}
+              ))}
             </div>
 
             <div className="recommendation">
@@ -129,12 +129,12 @@ const JeounghoMain = () => {
                 <p>회원님을 위한 추천</p>
                 <strong>모두 보기</strong>
               </div>
-              {/* {saveComment.map(item => (
+              {mainData2.map(item => (
                 <div className="suggestion" key={item.id}>
                   <img src="./images/shin/default profile.png" alt="default" />
-                  <p>{item.id}</p>
+                  <p>{item.profile}</p>
                 </div>
-              ))} */}
+              ))}
             </div>
             <div className="footer">
               {FOOTER.map(item => (
