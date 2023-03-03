@@ -1,0 +1,62 @@
+.sumiLogin {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  .boxLogin {
+    width: 270px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+
+    .titLogo {
+      display: block;
+      padding-bottom: 20px;
+      font-family: 'Lobster', cursive;
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    [class*='inp'] {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 32px;
+      margin: 10px 0;
+      padding: 0 10px;
+      border: 1px solid #dedede;
+      background-color: #f2f2f2;
+    }
+
+    .btnLogin {
+      display: block;
+      width: 100%;
+      height: 32px;
+      margin-top: 20px;
+      background-color: #4cb4f8;
+      color: #fff;
+      font-size: 13px;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+
+    .linkPassword {
+      display: block;
+      margin-top: 50px;
+      padding: 10px 0;
+      color: #395185;
+      font-size: 12px;
+      text-align: center;
+    }
+    .descError {
+      color: #e00834;
+      font-size: 12px;
+    }
+  }
+}

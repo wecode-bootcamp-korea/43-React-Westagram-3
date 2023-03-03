@@ -1,0 +1,570 @@
+/* header */
+
+.sumiMain {
+  .navWesta {
+    border-bottom: 1px solid #dedede;
+    background-color: #fff;
+  }
+
+  .innerNav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 853px;
+    height: 60px;
+    margin: 0 auto;
+
+    .titLogo {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+    }
+
+    .linkLogo {
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .inpSearch {
+      box-sizing: border-box;
+      width: 268px;
+      height: 30px;
+      padding: 5px 20px;
+      border: 1px solid #dedede;
+      border-radius: 30px;
+    }
+
+    .wrapSearch {
+      position: relative;
+    }
+
+    .listUtil {
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+
+        .linkUtil {
+          display: block;
+          width: 23px;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .listUser {
+      position: absolute;
+      z-index: 10;
+      top: 45px;
+      left: 0;
+      width: 330px;
+      padding: 10px 0;
+      border: 1px solid #dedede;
+      border-radius: 10px;
+      background-color: #fff;
+
+      .linkUser {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 7px 15px;
+      }
+
+      .areaThumb {
+        width: 40px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+
+      .thumbUser {
+        display: block;
+        padding-top: 100%;
+        background-size: cover;
+      }
+
+      .groupInfo {
+        width: 230px;
+        padding-left: 15px;
+      }
+
+      .titUser {
+        display: block;
+        overflow: hidden;
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .txtInfo {
+        display: block;
+        overflow: hidden;
+        color: #888;
+        font-size: 12px;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  /* 메인 */
+  .contentWesta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 853px;
+    margin: 50px auto;
+  }
+
+  .instaFeed {
+    width: 470px;
+  }
+  .listInsta {
+    background-color: #fff;
+
+    > li {
+      position: relative;
+      padding: 15px 0;
+    }
+
+    > li + li {
+      border-top: 1px solid #dedede;
+    }
+
+    .wrapFeedimg {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .thumbFeed {
+      display: block;
+      padding-top: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .utilFeed {
+      position: relative;
+      padding-top: 13px;
+      font-size: 0;
+
+      [class*='btn'] {
+        width: 24px;
+        margin: 0 7px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .btnBookmark {
+        position: absolute;
+        top: 11px;
+        right: -2px;
+      }
+    }
+
+    .linkProfile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      height: 48px;
+      margin-bottom: 10px;
+      overflow: hidden;
+
+      .titUser {
+        display: block;
+        max-width: 60%;
+        padding-left: 10px;
+        overflow: hidden;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+
+      .txtInfo {
+        display: block;
+        padding-top: 3px;
+        color: #888;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .numDate {
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        color: #555;
+        font-size: 12px;
+        line-height: 18px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 8px;
+          width: 3px;
+          height: 3px;
+          -webkit-transform: translateY(50%);
+          -moz-transform: translateY(-50%);
+          transform: translateY(-50%);
+          border-radius: 100%;
+          background-color: #999;
+        }
+      }
+    }
+
+    .wrapThumb {
+      position: relative;
+      width: 32px;
+    }
+
+    .thumbProfile {
+      display: block;
+      padding-top: 100%;
+      overflow: hidden;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      & ::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding-top: 100%;
+        border: 1px solid #dedede;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .btnOption {
+      position: absolute;
+      top: 22px;
+      right: -10px;
+      padding: 10px;
+    }
+
+    .feedUser {
+      padding: 9px 0 2px;
+      font-size: 0;
+
+      .linkUser {
+        display: inline-block;
+        max-width: 30%;
+        overflow: hidden;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+
+      .descFeed {
+        display: inline-block;
+        width: 150px;
+        padding-left: 5px;
+        overflow: hidden;
+        color: #222;
+        font-size: 14px;
+        line-height: 18px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+
+      .btnMore {
+        color: #888;
+        font-size: 14px;
+        line-height: 18px;
+        vertical-align: top;
+      }
+
+      .btnOption {
+        position: absolute;
+        top: 22px;
+        right: -10px;
+        padding: 10px;
+      }
+    }
+
+    .groupComment {
+      .linkComment {
+        display: inline-block;
+        padding: 5px 0;
+        color: #888;
+        font-size: 14px;
+        line-height: 18px;
+        vertical-align: top;
+      }
+
+      .inpComment {
+        box-sizing: border-box;
+        width: 100%;
+        height: 18px;
+        padding-right: 40px;
+        border: 0 none;
+        outline: none;
+        font-size: 14px;
+        line-height: 18px;
+
+        &::placeholder {
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        .areaWritebox {
+          position: relative;
+        }
+
+        .btnSubmit {
+          position: absolute;
+          top: 50%;
+          right: -5px;
+          padding: 5px;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          transform: translateY(-50%);
+          color: #3578e5;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+
+      .areaWritebox {
+        position: relative;
+      }
+
+      .btnSubmit {
+        position: absolute;
+        top: 50%;
+        right: -5px;
+        padding: 5px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: #3578e5;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .asideInsta {
+    width: 319px;
+    padding-top: 15px;
+
+    .linkUser {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+
+      .wrapThumb {
+        position: relative;
+        width: 56px;
+        overflow: hidden;
+        border-radius: 100%;
+      }
+
+      .thumbUser {
+        display: block;
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding-top: 100%;
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .infoUser {
+        display: block;
+        padding-left: 15px;
+      }
+
+      .titUser {
+        display: block;
+        color: #222;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .txtInfo {
+        display: block;
+        padding-top: 3px;
+        color: #888;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    .boxInfo {
+      position: relative;
+      margin-top: 15px;
+      overflow: hidden;
+
+      .listInfo {
+        margin-left: 3px;
+
+        li {
+          position: relative;
+          margin-bottom: 16px;
+        }
+      }
+
+      .titInfo {
+        display: block;
+        padding-bottom: 15px;
+        color: #222;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+      }
+
+      .linkMore {
+        position: absolute;
+        color: #888;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .linkProfile {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      .thumbProfile {
+        position: relative;
+        width: 32px;
+        overflow: hidden;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & ::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          box-sizing: border-box;
+          border: 1px solid #dedede;
+          border-radius: 100%;
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .infoUser {
+        padding-left: 12px;
+      }
+
+      .titUser {
+        display: block;
+        color: #222;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .numDate,
+      .txtInfo {
+        display: block;
+        width: 150px;
+        overflow: hidden;
+        color: #888;
+        font-size: 12px;
+        line-height: 16px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+
+      .btnFollow {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        color: #3578e5;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .instaFooter {
+    padding-top: 20px;
+
+    .listCorp {
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+      }
+
+      li + li ::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -1px;
+        width: 2px;
+        height: 2px;
+        border-radius: 100%;
+        background-color: #888;
+      }
+      .linkCorp {
+        display: block;
+        padding: 2px 6px;
+        color: #888;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    .txtCopy {
+      padding-top: 10px;
+      color: #888;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

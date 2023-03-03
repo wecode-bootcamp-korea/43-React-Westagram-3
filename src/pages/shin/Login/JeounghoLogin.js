@@ -1,5 +1,5 @@
 import React from 'react';
-const JeounghoLogin = () => {
+function JeounghoLogin() {
   return <div>Login</div>;
-};
+}
 export default JeounghoLogin;

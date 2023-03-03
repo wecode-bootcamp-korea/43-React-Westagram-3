@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "profileImg": "./images/kim/@thumb_960x640.jpg",
+    "profileLink": "#none",
+    "profileId": "wecode_bootcamp",
+    "date": "2일전",
+    "feedImg": "images/kim/@thumb_960x640.jpg",
+    "feedId": "wecode_bootcamp",
+    "feedDesc": "위워크에서 진행한 베이킹 클래스"
+  },
+  {
+    "id": 2,
+    "profileImg": "images/kim/@thumb_960x640.jpg",
+    "profileLink": "#none",
+    "profileId": "sumi__zz",
+    "date": "10일전",
+    "feedImg": "images/kim/@thumb_960x640.jpg",
+    "feedId": "sumi__zz",
+    "feedDesc": "위워크에서 진행한 위코드 클래스"
+  },
+  {
+    "id": 3,
+    "profileImg": "images/kim/@thumb_960x640.jpg",
+    "profileLink": "#none",
+    "profileId": "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    "date": "2일전",
+    "feedImg": "images/kim/@thumb_960x640.jpg",
+    "feedId": "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    "feedDesc": "일이삼사오육칠팔구십일이삼사오육칠팔구십"
+  }
+]

@@ -1,0 +1,13 @@
+[
+  { "id": 1, "link": "#none", "text": "소개'" },
+  { "id": 2, "link": "#none", "text": "도움말" },
+  { "id": 3, "link": "#none", "text": "홍보 센터" },
+  { "id": 4, "link": "#none", "text": "API" },
+  { "id": 5, "link": "#none", "text": "채용 정보" },
+  { "id": 6, "link": "#none", "text": "개인정보처리방침" },
+  { "id": 7, "link": "#none", "text": "약관" },
+  { "id": 8, "link": "#none", "text": "위치" },
+  { "id": 9, "link": "#none", "text": "인기 계정 " },
+  { "id": 10, "link": "#none", "text": "해시태그" },
+  { "id": 11, "link": "#none", "text": "언어" }
+]
